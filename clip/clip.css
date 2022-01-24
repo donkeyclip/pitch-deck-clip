@@ -1,0 +1,157 @@
+* {
+  --primary:{{ initParams.styles.primary }};
+  --secondary:{{ initParams.styles.secondary }};
+  --accent:{{ initParams.styles.accent }};
+  --fontFamily:{{initParams.styles.font}}
+}
+
+.root {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  color: var(--accent);
+  font-family: 'Outfit', sans-serif;
+}
+
+.lt{
+  left:0;
+  top:10%;
+  background: var(--secondary);
+  width: 150px;
+  height: 150px;
+  position: absolute;
+}
+
+.intro,.problem{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary);
+  overflow: hidden;
+}
+
+.rb{
+  position: absolute;
+  width: 12%;
+  height: 75%;
+  right: 0;
+  bottom: 0;
+  background: var(--secondary);
+  display: flex; 
+  justify-content: center;
+}
+
+.grid-dot-wrapper{
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top:70%;
+  left: 85%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(24px, 1fr));
+  grid-gap: 10px;
+  align-items: center;
+  justify-items: center;
+}
+
+.grid-dot{
+  width: 20px;
+  height: 20px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+.comp-info ,.problem-info{
+  position: absolute;
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  top: 35%;
+  left: 5%;
+  overflow: hidden;
+}
+
+.comp-name{
+  font-size: 200px;
+  font-weight: 700;
+  position: relative;
+}
+
+.slogan{
+  font-size: 40px;
+  margin-top: 30px;
+  position: relative;
+}
+
+
+.problem-info{
+  top:13%;
+  width: 500px;
+}
+
+.problem-info > .title{
+  font-size: 100px;
+  font-weight: 700;
+  left:-100%;
+  position: relative;
+}
+
+.problem-info > .subtitle{
+  font-size: 30px;
+  font-weight: 400;
+  left:-100%;
+  position: relative;
+}
+
+.problem > .rb{
+  left: 3%;
+  width: 15%;
+  height: 0%;
+}
+
+.problem > .lt{
+  left: 97%;
+  width: 60px;
+  height: 60px;
+}
+
+.problem-list-root{
+  width: 33%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  left: 50%;
+  top:15%;
+}
+
+.problem-title-wrapper,.problem-description-wrapper{
+  position: relative;
+  overflow: hidden;
+}
+.problem-title-wrapper{
+  margin-top: 40px;
+}
+.problem-description-wrapper{
+  margin-top: 40px;
+}
+
+.flex-column{
+  display: flex;
+  flex-direction: column;
+}
+
+.problem-title{
+  font-size: 50px;
+  font-weight: 700;
+  position: relative;
+  top: -100px;
+}
+
+.problem-description{
+  font-size: 30px;
+  font-weight: 400;
+  position: relative;
+  top: -100px;
+}

@@ -1,0 +1,28 @@
+
+<div class="root">
+  <div class="problem">
+    <div class="rb"></div>
+    <div class="lt"></div>
+    <div class="problem-info">
+      <div class="title">Problem</div>
+      <div class="subtitle">{{initParams.probleml.subtitle}}</div>
+    </div>
+    <div class="problem-list-root">
+      <div class="flex-column" mc-for="key,item" mc-of="initParams.probleml.list">
+          <div class="problem-title-wrapper"> <div class="{{ 'problem-title problem-title-' + key }}">{{ item.title }}</div></div>
+          <div class="problem-description-wrapper"><div class="{{ 'problem-description problem-description-' + key }}">{{ item.description }}</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="intro">
+    <div class="lt"></div>
+    <div class="rb"></div>
+    <div class="comp-info">
+      <div class="comp-name">{{initParams.intro.name}}</div>
+      <div class="slogan">{{initParams.intro.slogan}}</div>
+    </div>
+  </div>
+  <div class="grid-dot-wrapper" >
+    <div mc-for="key,item" mc-of="initParams.test" class="grid-dot"></div>
+  </div>
+</div>
