@@ -56,6 +56,11 @@ export const initParams = [
           },  
         ]
       },
+      product:{
+        title:"Product or Service",
+        description:"Introduce your company's product or service as the ultimate solution to these problems",
+        img:""
+      },
       dots:16
     },
   },
