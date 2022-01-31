@@ -50,11 +50,40 @@ export const opacity = (selector, duration, easing = "linear") =>
     }
   );
 
+  export const moveBottom = (bottom,selector, duration, delay = 0, easing = "linear") =>
+  new CSSEffect(
+    {
+      animatedAttrs: {
+        bottom,
+      },
+    },
+    {
+      selector,
+      duration,
+      easing,
+      delay
+    }
+  );
+
   export const moveLeft = (left,selector, duration, easing = "linear") =>
   new CSSEffect(
     {
       animatedAttrs: {
         left,
+      },
+    },
+    {
+      selector,
+      duration,
+      easing,
+    }
+  );
+
+  export const moveRight = (right,selector, duration, easing = "linear") =>
+  new CSSEffect(
+    {
+      animatedAttrs: {
+        right,
       },
     },
     {
@@ -78,6 +107,19 @@ export const opacity = (selector, duration, easing = "linear") =>
     }
   );
 
+  export const widthMove = (width,selector, duration, easing = "linear") =>
+  new CSSEffect(
+    {
+      animatedAttrs: {
+        width,
+      },
+    },
+    {
+      selector,
+      duration,
+      easing,
+    }
+  );
 
 export const riple = (rows,columns,startRow ,startCol, minDelay,maxDelay,attrs,selector) => {
   const maxY= (startCol + 1)*2 <= columns ? columns-1 - startCol:startCol;

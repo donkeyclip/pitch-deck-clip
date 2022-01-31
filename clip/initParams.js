@@ -20,7 +20,8 @@ export const initParams = [
         slogan:"Write your company name above and an intriguing summary of what your company does here.",
         name:"Pitch Deck",
       },
-      probleml:{
+      problem:{
+        title:"Problem",
         subtitle:"List 1-3 problems your company observes and wants to solve.",
         list:[
           { 
@@ -34,6 +35,24 @@ export const initParams = [
           { 
             title:"Problem 3",
             description:"Give a striking overview of the problem and explain it briefly."
+          },  
+        ]
+      },
+      solution:{
+        title:"The Utopia",
+        subtitle:"List 1-3 ways your company proposes to solve them.",
+        list:[
+          { 
+            title:"Solution 1",
+            description:"Describe how you envision to solve the problemsyou previously shared."
+          },
+          { 
+            title:"Solution 2",
+            description:"Communicate big value conveniences and be truly straight forward."
+          },
+          { 
+            title:"Solution 3",
+            description:"Be very clear so you can smoothly jump next to introducing your product."
           },  
         ]
       },

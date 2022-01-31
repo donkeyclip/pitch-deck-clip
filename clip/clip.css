@@ -24,7 +24,7 @@
   position: absolute;
 }
 
-.intro,.problem{
+.intro,.problem,.solution{
   position: absolute;
   width: 100%;
   height: 100%;
@@ -73,6 +73,16 @@
   overflow: hidden;
 }
 
+.solution-info{
+  position: absolute;
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  top: 35%;
+  right: 5%;
+  overflow: hidden;
+}
+
 .comp-name{
   font-size: 200px;
   font-weight: 700;
@@ -86,9 +96,9 @@
 }
 
 
-.problem-info{
+.problem-info,.solution-info{
   top:13%;
-  width: 500px;
+  width: 507px;
 }
 
 .problem-info > .title{
@@ -98,10 +108,24 @@
   position: relative;
 }
 
+.solution-info > .title{
+  font-size: 100px;
+  font-weight: 700;
+  right:-100%;
+  position: relative;
+}
+
 .problem-info > .subtitle{
   font-size: 30px;
   font-weight: 400;
   left:-100%;
+  position: relative;
+}
+
+.solution-info > .subtitle{
+  font-size: 30px;
+  font-weight: 400;
+  right:-100%;
   position: relative;
 }
 
@@ -117,6 +141,15 @@
   height: 60px;
 }
 
+.solution > .rt{
+  height: 0%;
+  right:8%;
+}
+
+.solution > .lt{
+  width:0%;
+}
+
 .problem-list-root{
   width: 33%;
   position: absolute;
@@ -126,14 +159,23 @@
   top:15%;
 }
 
-.problem-title-wrapper,.problem-description-wrapper{
+.solution-list-root{
+  width: 33%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  right: 50%;
+  top:15%;
+}
+
+.problem-title-wrapper,.problem-description-wrapper,.solution-title-wrapper,.solution-description-wrapper{
   position: relative;
   overflow: hidden;
 }
-.problem-title-wrapper{
+.problem-title-wrapper,.solution-title-wrapper{
   margin-top: 40px;
 }
-.problem-description-wrapper{
+.problem-description-wrapper,.solution-description-wrapper{
   margin-top: 40px;
 }
 
@@ -142,14 +184,14 @@
   flex-direction: column;
 }
 
-.problem-title{
+.problem-title,.solution-title{
   font-size: 50px;
   font-weight: 700;
   position: relative;
   top: -100px;
 }
 
-.problem-description{
+.problem-description,.solution-description{
   font-size: 30px;
   font-weight: 400;
   position: relative;
