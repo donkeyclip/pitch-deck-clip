@@ -10,7 +10,6 @@ export const initParams = [
         logo:"https://presskit.donkeyclip.com/logos/donkey%20clip%20logo.svg",
         introImg:"https://unsplash.com/photos/n--CMLApjfI/download?force=true"
       },
-      test:230,
       styles:{
         accent:"#f4f4f4",
         secondary:"#ff4343",
@@ -38,7 +37,7 @@ export const initParams = [
           },  
         ]
       },
-      dots:Array(16).fill({})
+      dots:16
     },
   },
  
