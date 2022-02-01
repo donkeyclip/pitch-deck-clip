@@ -24,7 +24,7 @@
   position: absolute;
 }
 
-.intro,.problem,.solution,.product{
+.intro,.problem,.solution,.product,.timeline{
   position: absolute;
   width: 100%;
   height: 100%;
@@ -73,7 +73,7 @@
   overflow: hidden;
 }
 
-.solution-info{
+.solution-info, .timeline-info{
   position: absolute;
   width: 1200px;
   display: flex;
@@ -82,6 +82,18 @@
   right: 5%;
   overflow: hidden;
 }
+
+.product-info{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 90%;
+  bottom:10%;
+  right: 5%;
+  overflow: hidden;
+}
+
 
 .comp-name{
   font-size: 200px;
@@ -96,7 +108,7 @@
 }
 
 
-.problem-info,.solution-info{
+.problem-info,.solution-info,.timeline-info{
   top:13%;
   width: 507px;
 }
@@ -108,17 +120,17 @@
   position: relative;
 }
 
-.solution-info > .title{
-  font-size: 100px;
-  font-weight: 700;
-  right:-100%;
-  position: relative;
-}
-
 .problem-info > .subtitle{
   font-size: 30px;
   font-weight: 400;
   left:-100%;
+  position: relative;
+}
+
+.solution-info > .title{
+  font-size: 100px;
+  font-weight: 700;
+  right:-100%;
   position: relative;
 }
 
@@ -128,6 +140,37 @@
   right:-100%;
   position: relative;
 }
+
+.product-info > .title{
+  width:25%;
+  font-size: 70px;
+  font-weight: 700;
+  left:-30%;
+  position: relative;
+}
+
+.product-info > .description{
+  width:40%;
+  font-size: 30px;
+  font-weight: 400;
+  position: relative;
+  left:100%
+}
+
+.timeline-info > .title{
+  font-size: 70px;
+  font-weight: 700;
+  right:-100%;
+  position: relative;
+}
+
+.timeline-info > .description{
+  font-size: 30px;
+  font-weight: 400;
+  right:-100%;
+  position: relative;
+}
+
 
 .problem > .rb{
   left: 3%;
@@ -171,11 +214,6 @@
 .problem-title-wrapper,.problem-description-wrapper,.solution-title-wrapper,.solution-description-wrapper{
   position: relative;
   overflow: hidden;
-}
-.problem-title-wrapper,.solution-title-wrapper{
-  margin-top: 40px;
-}
-.problem-description-wrapper,.solution-description-wrapper{
   margin-top: 40px;
 }
 
@@ -184,36 +222,18 @@
   flex-direction: column;
 }
 
-.problem-title,.solution-title{
+.problem-title,.solution-title,.step-title{
   font-size: 50px;
   font-weight: 700;
   position: relative;
   top: -100px;
 }
 
-.problem-description,.solution-description{
+.problem-description,.solution-description,.step-date{
   font-size: 30px;
   font-weight: 400;
   position: relative;
   top: -100px;
-}
-
-.product > .title{
-  width:25%;
-  font-size: 70px;
-  font-weight: 700;
-  left:-30%;
-  bottom:15%;
-  position: absolute;
-}
-
-.product > .description{
-  width:40%;
-  font-size: 30px;
-  font-weight: 400;
-  position: absolute;
-  left:45%;
-  bottom:-100%;
 }
 
 .product > .lt{
@@ -229,3 +249,32 @@
   transform: translate(-60%,-50%);
   width: 0;
 }
+
+/* .calendar{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  width:20%;
+  left: 10%;
+  top:10%;
+  border: 1px solid red; 
+
+}*/
+
+/* .timeline > .title{
+  width:25%;
+  font-size: 70px;
+  font-weight: 700;
+  left:-30%;
+  bottom:15%;
+  position: relative;
+}
+.timeline > .description{
+  width:40%;
+  font-size: 30px;
+  font-weight: 400;
+  position: relative;
+  left:45%;
+  bottom:-100%;
+} */

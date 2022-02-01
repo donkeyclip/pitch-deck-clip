@@ -70,16 +70,18 @@ clip.addIncident(moveRight("100%",".solution-list-root",500),4500)
 clip.addIncident(moveLeft("-100%",".solution > .lt",500),4500)
 clip.addIncident(opacity(".solution",1),5000)
 //appear product slide
-clip.addIncident(moveLeft("10%",".product > .title",500),5000)
-clip.addIncident(moveBottom("15%",".product > .description",500),5000)
+clip.addIncident(moveLeft("5%",".product-info > .title",500),5000)
+clip.addIncident(moveLeft("20%",".product-info > .description",500),5000)
 clip.addIncident(heightMove("45%",".product > .lt",500),5000)
 clip.addIncident(widthMove("25%",".product img",500),5000)
 //remove product slide
-clip.addIncident(moveLeft("-100%",".product > .title",500),5500)
-clip.addIncident(moveLeft("100%",".product > .description",500),5500)
+clip.addIncident(moveLeft("-100%",".product-info > .title",500),5500)
+clip.addIncident(moveLeft("100%",".product-info > .description",500),5500)
 clip.addIncident(moveTop("100%",".product > .lt",500),5900)
 clip.addIncident(moveTop("140%",".product img",500),5900)
 clip.addIncident(opacity(".product",1),6400)
-
+//appear timeline slide
+clip.addIncident(moveRight("0%",".timeline-info > .title",500),6400)
+clip.addIncident(moveRight("0%",".timeline-info > .description ",500),6600)
 
 //scroll-stops 400,2700,4500,5500

@@ -61,6 +61,24 @@ export const initParams = [
         description:"Introduce your company's product or service as the ultimate solution to these problems",
         img:""
       },
+      timeline:{
+        title:"Birth of Productor Service",
+        description:"A simple timeline on how your product or service came to be a helpful way to visualizing your origin story. What frusrations or ideas led to this?",
+        steps:[
+          {
+            title:"Step 1",
+            date:"2020"
+          },
+          {
+            title:"Step 2",
+            date:"2021"
+          },
+          {
+            title:"Step 3",
+            date:"2022"
+          },
+        ]
+      },
       dots:16
     },
   },
