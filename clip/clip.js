@@ -81,7 +81,41 @@ clip.addIncident(moveTop("100%",".product > .lt",500),5900)
 clip.addIncident(moveTop("140%",".product img",500),5900)
 clip.addIncident(opacity(".product",1),6400)
 //appear timeline slide
+clip.addIncident(heightMove("100%",".timeline > .lt",1100),6400)
+clip.addIncident(widthMove("50%",".timeline > .rb",500),6400)
 clip.addIncident(moveRight("0%",".timeline-info > .title",500),6400)
 clip.addIncident(moveRight("0%",".timeline-info > .description ",500),6600)
+clip.addIncident(moveTop("0px",".step-title",500,"@stagger(0, 400)"),6400)
+clip.addIncident(moveTop("0px",".step-date",500,"@stagger(0, 400)"),6800)
+//remove timeline slide
+clip.addIncident(moveTop("100%",".timeline > .lt",400),7700)
+clip.addIncident(moveLeft("-50%",".calendar",500),8100)
+clip.addIncident(moveTop("-100%",".timeline-info",500),7800)
+clip.addIncident(widthMove("0%",".timeline > .rb",500),7800)
+clip.addIncident(opacity(".timeline",1),8600)
+//appear timing slide
+clip.addIncident(moveTop("13%",".timing > .title",700),8600)
+clip.addIncident(moveTop("0%",".timing img",800),8600)
+clip.addIncident(moveLeft("5%",".timing-title",500,"@stagger(0, 400)"),8600)
+clip.addIncident(moveLeft("5%",".timing-description",500,"@stagger(0, 400)"),9000)
+clip.addIncident(widthMove("15%",".timing > .lt",500),8600)
+clip.addIncident(heightMove("80%",".timing > .rb",800),8600)
+//remove timing slide
+clip.addIncident(widthMove("0%",".timing > .lt",500),9900)
+clip.addIncident(moveLeft("-50%",".timing > .title",900),9900)
+clip.addIncident(moveLeft("-50%",".timing > .timing-info",900),10000)
+clip.addIncident(moveTop("100%",".timing img",500),10000)
+clip.addIncident(moveBottom("100%",".timing > .rb",500),10000)
+clip.addIncident(opacity(".timing",1),10900)
+//appear traction slide
+clip.addIncident(moveBottom("10%",".traction-info",700),10900)
+clip.addIncident(widthMove("6%",".lt,.rb",700),10900)
+  /////// duration:5000 timings: {intro: 2000,static: 1000,outro: 2000},starttime:10900
+//remove 
+clip.addIncident(widthMove("100%",".lt,.rb",400),15900)
+clip.addIncident(moveBottom("100%",".traction-info",1),16299)
+clip.addIncident(moveLeft("100%",".lt",400),16300)
+clip.addIncident(moveRight("100%",".rb",400),16300)
+clip.addIncident(opacity(".traction",1),16700)
 
-//scroll-stops 400,2700,4500,5500
+//scroll-stops 400,2700,4500,5500,7700,9900,12900,

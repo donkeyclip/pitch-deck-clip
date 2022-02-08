@@ -1,0 +1,47 @@
+{
+    "title": "Traction",
+    "maxValue": 40,
+    "unit": "%",
+    "hover": false,
+    "showGrid":false,
+    "dataSets": [
+      {
+        "title": "Development Phase A",
+        "color": "white"
+      },
+      {
+        "title": "Development Phase B",
+        "color": "white"
+      }
+    ],
+    "data": [
+      {
+        "name": "Item 1",
+        "values": [56, 45]
+      },
+      {
+        "name": "Item 2",
+        "values": [43, 24]
+      },
+      {
+        "name": "Item 3",
+        "values": [61, 11]
+      },
+      {
+        "name": "Item 4",
+        "values": [10, 35]
+      },
+      {
+        "name": "Item 5",
+        "values": [3, 81]
+      },
+      {
+        "name": "Item 6",
+        "values": [74, 92, 59]
+      },
+      {
+        "name": "Item 7",
+        "values": [74, 92, 59]
+      }
+    ]
+  }

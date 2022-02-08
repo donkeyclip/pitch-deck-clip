@@ -1,4 +1,6 @@
-import { CSSEffect } from "@donkeyclip/motorcortex";
+import { CSSEffect, loadPlugin } from "@donkeyclip/motorcortex";
+import MCGraphsDef from "@donkeyclip/motorcortex-graphs";
+const MCGraphs = loadPlugin(MCGraphsDef);
 
 export const scaleOne = (selector, duration, easing = "linear") =>
   new CSSEffect(
@@ -65,7 +67,7 @@ export const opacity = (selector, duration, easing = "linear") =>
     }
   );
 
-  export const moveLeft = (left,selector, duration, easing = "linear") =>
+  export const moveLeft = (left,selector, duration, delay = 0, easing = "linear") =>
   new CSSEffect(
     {
       animatedAttrs: {
@@ -76,10 +78,11 @@ export const opacity = (selector, duration, easing = "linear") =>
       selector,
       duration,
       easing,
+      delay
     }
   );
 
-  export const moveRight = (right,selector, duration, easing = "linear") =>
+  export const moveRight = (right,selector, duration, delay = 0, easing = "linear") =>
   new CSSEffect(
     {
       animatedAttrs: {
@@ -90,6 +93,7 @@ export const opacity = (selector, duration, easing = "linear") =>
       selector,
       duration,
       easing,
+      delay
     }
   );
 
@@ -137,3 +141,28 @@ export const riple = (rows,columns,startRow ,startCol, minDelay,maxDelay,attrs,s
     }
   );
 }
+// export const newGraph = new MCGraphs.LineGraph(
+//   {
+//     data: graphData,
+//     trace: {
+//       toggle: false,
+//       scale: 1.45,
+//     },
+//     legend: true,
+//     timings: {
+//       intro: 7000,
+//       static: 1000,
+//       outro: 7000,
+//     },
+//     font: {
+//       size: "1.7rem",
+//     },
+//   },
+//   {
+//     selector: ".chart",
+//     containerParams: {
+//       width: "1024px",
+//       height: "768px",
+//     },
+//   }
+// );

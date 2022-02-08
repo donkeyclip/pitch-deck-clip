@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "@donkeyclip/motorcortex": "^7.7.0",
+    "@donkeyclip/motorcortex-graphs": "^1.7.2",
     "html-loader": "3.1.0",
     "raw-loader": "4.0.2"
   },

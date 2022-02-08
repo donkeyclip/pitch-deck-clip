@@ -79,6 +79,28 @@ export const initParams = [
           },
         ]
       },
+      timing:{
+        title:"Timing",
+        reasons:[
+          {
+            title:"Reason 1",
+            description:'Why is "now" the best time for your company to rise and go to the next level?',
+          },
+          {
+            title:"Reason 2",
+            description:"What arre the trends these days that make your product or service possible?"
+          }
+        ],
+        img:{
+          url:"",
+          width:"650px",
+          height:"813px"
+        }
+      },
+      traction:{
+        title:"Traction",
+        description:"Where is your company currently at? Visualize with a graph to highlight important developments."
+      },
       dots:16
     },
   },
