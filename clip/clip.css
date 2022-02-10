@@ -25,7 +25,7 @@
   position: absolute;
 }
 
-.intro,.problem,.solution,.product,.timeline,.timing,.traction,.target-market,.market-size{
+.intro,.problem,.solution,.product,.timeline,.timing,.traction,.target-market,.market-size,.competitors{
   position: absolute;
   width: 100%;
   height: 100%;
@@ -478,7 +478,7 @@
   width:0%;
   height: 50%;
 }
-.traction > .rb{
+.traction > .rb, .competitors > .rb{
   right: 0%;
   bottom: 0%;
   width: 0%;
@@ -497,4 +497,52 @@
   height: 0%;
   bottom: 0%;
   width: 25%;
+}
+
+.competitors .title{
+  font-size: 70px;
+  font-weight: 700;
+  opacity: 0;
+}
+
+.direct{
+  position:absolute;
+  display: flex;
+  flex-direction: row;
+  top: 8%;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  left: 5%;
+}
+
+.indirect{
+  position:absolute;
+  display: flex;
+  flex-direction: row;
+  bottom: 10%;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  left: 5%;
+}
+
+.competitors-icon-wrapper{
+  width:150px;
+  height: 150px;
+  border-radius: 100%;
+}
+
+.direct-competitors-icon-wrapper{
+  background: var(--secondary);
+}
+
+.indirect-competitors-icon-wrapper{
+  background: var(--primary);
+}
+
+.competitors-list-root{
+  display: flex;
+  flex-direction: row;
+  gap:50px;
 }

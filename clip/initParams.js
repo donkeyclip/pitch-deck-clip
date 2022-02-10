@@ -133,6 +133,24 @@ export const initParams = [
           },
         ]
       },
+      competitors:{
+        dCompetitors:{
+          title:"Direct Competitors",
+          list:[
+            "",
+            "",
+            ""
+          ]
+        },
+        iCompetitors:{
+          title:"Indirect Competitors",
+          list:[
+            "",
+            "",
+            ""
+          ]
+        }
+      },
       dots:16
     },
   },

@@ -1,5 +1,24 @@
 
 <div class="root">
+  <div class="competitors">
+    <div class="rb"></div>
+    <div class="direct">
+      <div class="title">{{initParams.competitors.dCompetitors.title}}</div>
+      <div class="competitors-list-root direct-competitors-list-root">
+        <div class="item" mc-for="key,item" mc-of="initParams.competitors.dCompetitors.list">
+            <div class="competitors-icon-wrapper direct-competitors-icon-wrapper"> <div class="{{ 'direct-competitors-icon direct-competitors-icon-' + key }}">{{ item }}</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="indirect">
+      <div class="competitors-list-root indirect-competitors-list-root">
+        <div class="item" mc-for="key,item" mc-of="initParams.competitors.iCompetitors.list">
+            <div class="competitors-icon-wrapper indirect-competitors-icon-wrapper"> <div class="{{ 'indirect-competitors-icon indirect-competitors-icon-' + key }}">{{ item }}</div></div>
+        </div>
+      </div>
+      <div class="title">{{initParams.competitors.iCompetitors.title}}</div>
+    </div>
+  </div>
   <div class="market-size">
     <div class="market-size-info">
       <div class="title">{{initParams.marketSize.title}}</div>

@@ -198,5 +198,7 @@ clip.addIncident(opacity1(".market-size-tag", 500, "@stagger(0, 600)"), 19800);
 clip.addIncident(moveBottom("100%", ".market-size-info", 400), 20900);
 clip.addIncident(moveBottom("-40%", ".market-size-list-root", 400), 20900);
 clip.addIncident(opacity(".market-size", 1), 21300);
-
+//appear competitors slide
+clip.addIncident(widthMove("100%",".competitors > .rb",400),21300)
+clip.addIncident(opacity1(".competitors .title",500),21700)
 //scroll-stops 400,2700,4500,5500,7700,9900,12900,18300,20900
