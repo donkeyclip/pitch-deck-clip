@@ -63,7 +63,7 @@ export const initParams = [
       },
       timeline:{
         title:"Birth of Productor Service",
-        description:"A simple timeline on how your product or service came to be a helpful way to visualizing your origin story. What frusrations or ideas led to this?",
+        subtitle:"A simple timeline on how your product or service came to be a helpful way to visualizing your origin story. What frusrations or ideas led to this?",
         steps:[
           {
             title:"Step 1",
@@ -99,7 +99,39 @@ export const initParams = [
       },
       traction:{
         title:"Traction",
-        description:"Where is your company currently at? Visualize with a graph to highlight important developments."
+        subtitle:"Where is your company currently at? Visualize with a graph to highlight important developments."
+      },
+      targetMarket:{
+        title:"Target Market",
+        subtitle:"Who are the customers you want to care to?",
+        list:[
+          {
+            title:"Target Market 1",
+            description:"What are their profiles and visual personas?"
+          },
+          {
+            title:"Target Market 2",
+            description:"Visualize the people who will turn to you for solutions."
+          }
+        ]
+      },
+      marketSize:{
+        title:"Size the Market",
+        subtitle:"Apply the two ways to size the market - top down or bottom up. Some sizing jargons are TAM, SAM, and SOM.",
+        list:[
+          {
+            number: "1.9 Billion",
+            tag:"Total Available Market (TAM)"
+          },
+          {
+            number: "53 M",
+            tag:"Serviceable Available Market (SAM)"
+          },
+          {
+            number: "10.6 M",
+            tag:"Serviceable Obtainable Market (SOM)"
+          },
+        ]
       },
       dots:16
     },

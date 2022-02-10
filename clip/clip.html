@@ -1,10 +1,39 @@
 
 <div class="root">
+  <div class="market-size">
+    <div class="market-size-info">
+      <div class="title">{{initParams.marketSize.title}}</div>
+      <div class="subtitle">{{initParams.marketSize.subtitle}}</div>
+    </div>
+    <div class="market-size-list-root">
+      <div class="flex-column" mc-for="key,item" mc-of="initParams.marketSize.list">
+          <div class="market-size-number-wrapper"> <div class="{{ 'market-size-number market-size-number-' + key }}">{{ item.number }}</div></div>
+          <div class="market-size-tag-wrapper"><div class="{{ 'market-size-tag market-size-tag-' + key }}">{{ item.tag }}</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="target-market">
+    <div class="rb"></div>
+    <div class="lt"></div>
+    <div class="text">
+      <div class="target-market-list-root">
+        <div class="flex-column" mc-for="key,item" mc-of="initParams.targetMarket.list">
+            <div class="target-market-title-wrapper"> <div class="{{ 'target-market-title target-market-title-' + key }}">{{ item.title }}</div></div>
+            <div class="target-market-description-wrapper"><div class="{{ 'target-market-description target-market-description-' + key }}">{{ item.description }}</div></div>
+        </div>
+      </div>
+      <div class="target-market-info">
+        <div class="title">{{initParams.targetMarket.title}}</div>
+        <div class="subtitle">{{initParams.targetMarket.subtitle}}</div>
+      </div>
+    </div>
+    <div class="img"><img src="/assets/target-market.jpeg"/></div>
+  </div>
   <div class="traction">
     <div class="chart"></div>
     <div class="traction-info">
       <div class="title">{{initParams.traction.title}}</div>
-    <div class="description">{{initParams.traction.description}}</div>
+    <div class="subtitle">{{initParams.traction.subtitle}}</div>
     </div> 
     <div class="rb"></div>
     <div class="lt"></div>
@@ -26,7 +55,7 @@
     <div class="lt"></div>
     <div class="timeline-info">
       <div class="title">{{initParams.timeline.title}}</div>
-      <div class="description">{{initParams.timeline.description}}</div>
+      <div class="subtitle">{{initParams.timeline.subtitle}}</div>
     </div>
    <div class="calendar">
       <div mc-for="key,item" mc-of="initParams.timeline.steps" class="flex-column">

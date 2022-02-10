@@ -23,7 +23,7 @@ export const scaleOne = (selector, duration, easing = "linear") =>
     }
   );
 
-export const opacity = (selector, duration, easing = "linear") =>
+export const opacity = (selector, duration, delay = 0, easing = "linear") =>
   new CSSEffect(
     {
       animatedAttrs: {
@@ -33,6 +33,22 @@ export const opacity = (selector, duration, easing = "linear") =>
     {
       selector,
       duration,
+      delay,
+      easing,
+    }
+  );
+
+  export const opacity1 = (selector, duration, delay = 0, easing = "linear") =>
+  new CSSEffect(
+    {
+      animatedAttrs: {
+        opacity: 1,
+      },
+    },
+    {
+      selector,
+      duration,
+      delay,
       easing,
     }
   );

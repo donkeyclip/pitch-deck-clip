@@ -25,7 +25,7 @@
   position: absolute;
 }
 
-.intro,.problem,.solution,.product,.timeline,.timing,.traction{
+.intro,.problem,.solution,.product,.timeline,.timing,.traction,.target-market,.market-size{
   position: absolute;
   width: 100%;
   height: 100%;
@@ -84,7 +84,7 @@
   overflow: hidden;
 }
 
-.product-info,.traction-info{
+.product-info,.traction-info,.market-size-info{
   position: absolute;
   display: flex;
   flex-direction: row;
@@ -97,6 +97,10 @@
 
 .traction-info{
   bottom: -50%;
+}
+
+.market-size-info{
+  bottom: 75%;
 }
 
 .timeline-info{
@@ -115,9 +119,26 @@
   width: 35%;
   display: flex;
   flex-direction: column;
-  top: 45%;
+  top: 60%;
   left: 5%;
   overflow: hidden;
+}
+
+.target-market > .text{
+  position: absolute;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  top: 5%;
+  left: 5%;
+  height: 85%;
+  overflow: hidden;
+}
+
+.target-market-info{
+  display: flex;
+  flex-direction: column;
 }
 
 .comp-name{
@@ -173,12 +194,12 @@
   position: relative;
 }
 
-.product-info > .description{
+.product-info > .description {
   width:40%;
   font-size: 30px;
   font-weight: 400;
   position: relative;
-  left:100%
+  left:100%;
 }
 
 .timeline-info > .title{
@@ -188,7 +209,7 @@
   position: relative;
 }
 
-.timeline-info > .description{
+.timeline-info > .subtitle{
   margin-top: 40px;
   font-size: 30px;
   font-weight: 400;
@@ -227,12 +248,42 @@
   position: relative;
 }
 
-.traction-info > .description{
+.traction-info > .subtitle{
   width:40%;
   font-size: 30px;
   font-weight: 400;
   position: relative;
   left:20%;
+}
+
+.target-market-info > .title {
+  font-size: 70px;
+  font-weight: 700;
+  position: relative;
+  left: -100%;
+}
+
+.target-market-info > .subtitle {
+  font-size: 30px;
+  font-weight: 400;
+  position: relative;
+  left: -100%;
+}
+
+.market-size-info > .title{
+  width:35%;
+  font-size: 70px;
+  font-weight: 700;
+  left:-50%;
+  position: relative;
+}
+
+.market-size-info > .subtitle{
+  width:45%;
+  font-size: 30px;
+  font-weight: 400;
+  position: relative;
+  left:100%;
 }
 
 .problem > .rb{
@@ -287,6 +338,42 @@
   top:15%;
 }
 
+.target-market-list-root{
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.market-size-list-root{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  width: 90%;
+  left: 5%;
+  bottom: 30%;
+}
+
+.market-size-number{
+  background: var(--secondary);
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  width: 350px;
+  padding: 15px 0px 15px 0px;
+  border-radius: 20px;
+  opacity: 0;
+}
+
+.market-size-tag{
+  font-size: 30px;
+  font-weight: 400;
+  width: 350px;
+  opacity: 0;
+}
+
 .problem-title-wrapper,.problem-description-wrapper,.solution-title-wrapper,.solution-description-wrapper,.step-title-wrapper,.step-date-wrapper,.timing-title-wrapper,.timing-description-wrapper{
   position: relative;
   overflow: hidden;
@@ -296,6 +383,11 @@
 .flex-column{
   display: flex;
   flex-direction: column;
+}
+
+.flex-row{
+  display: flex;
+  flex-direction: row;
 }
 
 .problem-title,.solution-title,.step-title{
@@ -310,6 +402,21 @@
   font-weight: 400;
   position: relative;
   top: -100px;
+}
+
+.target-market-title{
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  position: relative;
+  left: -100%;
+}
+
+.target-market-description{
+  font-size: 30px;
+  font-weight: 400;
+  position: relative;
+  left: -100%;
 }
 
 .product > .lt{
@@ -344,6 +451,13 @@
   top: -100%;
 }
 
+.target-market img{
+  width:30%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right:-50%;
+}                                                                                                                                                                                                                                                         
 /* .timing > .rb{
   width: var(--timingImgWidth);
 } */
@@ -369,4 +483,18 @@
   bottom: 0%;
   width: 0%;
   height: 50%;
+}
+
+.target-market > .lt{
+  left: 0%;
+  width: 0%;
+  top: 0%;
+  height: 40%;
+}
+
+.target-market > .rb{
+  right: 0%;
+  height: 0%;
+  bottom: 0%;
+  width: 25%;
 }
