@@ -1,19 +1,41 @@
 
 <div class="root">
+  <div class="competitor-approach">
+    <div class="title">{{initParams.cApproach.title}}</div>
+    <div class="competitor-approach-list-root">
+      <div mc-for="key,item" mc-of="initParams.cApproach.list" class="flex-row item">
+        <div class="competitor-approach-icon-wrapper"><div class="{{ 'competitor-approach-icon competitor-approach-icon-' + key }}">{{item.icon}}</div></div>
+        <div class="flex-column">
+          <div class="competitor-approach-title-wrapper"><div class="{{ 'competitor-approach-title competitor-approach-title-' + key }}">{{item.title}}</div></div>
+          <div class="competitor-approach-description-wrapper"><div class="{{ 'competitor-approach-description competitor-approach-description-' + key }}">{{item.description}}</div></div>
+        </div>
+      </div>
+  </div>
+  </div>
+  <div class="competive-advantages">
+    <div class="lt"></div>
+    <div class="competive-advantages-list-root">
+        <div mc-for="key,item" mc-of="initParams.competiveAdvantages.list" class="flex-column item">
+          <div class="competive-advantages-title-wrapper"><div class="{{ 'competive-advantages-title competive-advantages-title-' + key }}">{{item.title}}</div></div>
+          <div class="competive-advantages-description-wrapper"><div class="{{ 'competive-advantages-description competive-advantages-description-' + key }}">{{item.description}}</div></div>
+        </div>
+    </div>
+    <div class="title">{{initParams.competiveAdvantages.title}}</div>
+  </div>
   <div class="competitors">
     <div class="rb"></div>
     <div class="direct">
       <div class="title">{{initParams.competitors.dCompetitors.title}}</div>
       <div class="competitors-list-root direct-competitors-list-root">
         <div class="item" mc-for="key,item" mc-of="initParams.competitors.dCompetitors.list">
-            <div class="competitors-icon-wrapper direct-competitors-icon-wrapper"> <div class="{{ 'direct-competitors-icon direct-competitors-icon-' + key }}">{{ item }}</div></div>
+            <div class="competitors-icon-wrapper direct-competitors-icon-wrapper"> <div class="{{ 'direct-competitors-icon direct-competitors-icon-' + key }}"><img src={{item}}/></div></div>
         </div>
       </div>
     </div>
     <div class="indirect">
       <div class="competitors-list-root indirect-competitors-list-root">
         <div class="item" mc-for="key,item" mc-of="initParams.competitors.iCompetitors.list">
-            <div class="competitors-icon-wrapper indirect-competitors-icon-wrapper"> <div class="{{ 'indirect-competitors-icon indirect-competitors-icon-' + key }}">{{ item }}</div></div>
+            <div class="competitors-icon-wrapper indirect-competitors-icon-wrapper"> <div class="{{ 'indirect-competitors-icon indirect-competitors-icon-' + key }}"><img src={{item}}/></div></div>
         </div>
       </div>
       <div class="title">{{initParams.competitors.iCompetitors.title}}</div>

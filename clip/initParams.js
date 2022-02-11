@@ -137,19 +137,60 @@ export const initParams = [
         dCompetitors:{
           title:"Direct Competitors",
           list:[
-            "",
-            "",
-            ""
+            "https://github.com/ElisavetAmpatzidou/pitch-deck/blob/main/demo/assets/cm1.png?raw=true",
+            "https://github.com/ElisavetAmpatzidou/pitch-deck/blob/main/demo/assets/cm2.png?raw=true",
+            "https://github.com/ElisavetAmpatzidou/pitch-deck/blob/main/demo/assets/cm3.png?raw=true"
           ]
         },
         iCompetitors:{
           title:"Indirect Competitors",
           list:[
-            "",
-            "",
-            ""
+            "https://github.com/ElisavetAmpatzidou/pitch-deck/blob/main/demo/assets/cm4.png?raw=true",
+            "https://github.com/ElisavetAmpatzidou/pitch-deck/blob/main/demo/assets/cm5.png?raw=true",
+            "https://github.com/ElisavetAmpatzidou/pitch-deck/blob/main/demo/assets/cm6.png?raw=true"
           ]
         }
+      },
+      competiveAdvantages:{
+        title:"Competive Advantages",
+        list:[
+          {
+            title:"Advantage 1",
+            description:"Visualize your competive advantages using a quadrant for easy scanning."
+          },
+          {
+            title:"Advantage 2",
+            description:"How is the landscape differentiated and what makes you different."
+          },
+          {
+            title:"Advantage 3",
+            description:"What can you do better than your competition? How will you outperfom them?"
+          },
+          {
+            title:"Advantage 4",
+            description:"A company with strong competitive advantages are likely to survive in the long term."
+          }
+        ]
+      },
+      cApproach:{
+        title:"Competitor Approach",
+        list:[
+          {
+            icon:"",
+            title:"Approach 1",
+            description:"How will you set your company from the competition?"
+          },
+          {
+            icon:"",
+            title:"Approach 2",
+            description:"What's your path to reach your customers?"
+          },
+          {
+            icon:"",
+            title:"Approach 3",
+            description:"Events, partnerships, ads - list the effective ways to reach them."
+          }
+        ]
       },
       dots:16
     },

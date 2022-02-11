@@ -25,7 +25,13 @@
   position: absolute;
 }
 
-.intro,.problem,.solution,.product,.timeline,.timing,.traction,.target-market,.market-size,.competitors{
+.intro,.problem,
+.solution,.product,
+.timeline,.timing,
+.traction,.target-market,
+.market-size,.competitors,
+.competive-advantages,
+.competitor-approach{
   position: absolute;
   width: 100%;
   height: 100%;
@@ -356,6 +362,28 @@
   bottom: 30%;
 }
 
+.competive-advantages-list-root{
+  width: 90%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  left: 8%;
+  top:8%;
+  height: 60%;
+}
+
+.competitor-approach-list-root{
+  width: 60%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  left: 40%;
+  top:5%;
+  height: 90%;
+}
+
 .market-size-number{
   background: var(--secondary);
   font-size: 40px;
@@ -374,7 +402,17 @@
   opacity: 0;
 }
 
-.problem-title-wrapper,.problem-description-wrapper,.solution-title-wrapper,.solution-description-wrapper,.step-title-wrapper,.step-date-wrapper,.timing-title-wrapper,.timing-description-wrapper{
+.problem-title-wrapper,
+.problem-description-wrapper,
+.solution-title-wrapper,
+.solution-description-wrapper,
+.step-title-wrapper,.step-date-wrapper,
+.timing-title-wrapper,
+.timing-description-wrapper,
+.competive-advantages-title-wrapper,
+.competive-advantages-description-wrapper,
+.competitor-approach-title-wrapper,
+.competitor-approach-description-wrapper{
   position: relative;
   overflow: hidden;
   margin-top: 40px;
@@ -390,14 +428,18 @@
   flex-direction: row;
 }
 
-.problem-title,.solution-title,.step-title{
+.problem-title,.solution-title,
+.step-title,.competive-advantages-title,
+.competitor-approach-title{
   font-size: 50px;
   font-weight: 700;
   position: relative;
   top: -100px;
 }
 
-.problem-description,.solution-description,.step-date{
+.problem-description,.solution-description,
+.step-date,.competive-advantages-description,
+.competitor-approach-description{
   font-size: 30px;
   font-weight: 400;
   position: relative;
@@ -528,12 +570,10 @@
 }
 
 .competitors-icon-wrapper{
-  width:150px;
-  height: 150px;
   border-radius: 100%;
 }
 
-.direct-competitors-icon-wrapper{
+.direct-competitors-icon-wrapper,.competitor-approach-icon-wrapper{
   background: var(--secondary);
 }
 
@@ -543,6 +583,50 @@
 
 .competitors-list-root{
   display: flex;
-  flex-direction: row;
   gap:50px;
+}
+
+.direct-competitors-list-root{
+  flex-direction: row;
+}
+
+.indirect-competitors-list-root{
+  flex-direction: row-reverse;
+}
+
+.competitors-icon-wrapper img,.competitor-approach-icon-wrapper img{
+  padding: 30px;
+}
+
+.competitors-list-root > .item{
+  opacity:0;
+}
+
+.competive-advantages-list-root .item{
+  width: 40%;
+}
+
+.competive-advantages > .title{
+  font-size: 70px;
+  font-weight: 700;
+  left: 8%;
+  bottom:-50%;
+  position: absolute;
+  width: 20%;
+}
+
+.competitor-approach > .title{
+  font-size: 70px;
+  font-weight: 700;
+  left: 8%;
+  top:-50%;
+  position: absolute;
+  width: 20%;
+}
+
+.competive-advantages > .lt {
+  top: 75%;
+  height: 20%;
+  width: 0;
+  left: 0;
 }

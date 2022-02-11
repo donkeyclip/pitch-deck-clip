@@ -190,9 +190,7 @@ clip.addIncident(
   19300
 );
 clip.addIncident(
-  opacity1(".market-size-number", 500, "@stagger(0, 600)"),
-  19600
-);
+  opacity1(".market-size-number", 500, "@stagger(0, 600)"),19600);
 clip.addIncident(opacity1(".market-size-tag", 500, "@stagger(0, 600)"), 19800);
 //remove market-size slide
 clip.addIncident(moveBottom("100%", ".market-size-info", 400), 20900);
@@ -201,4 +199,39 @@ clip.addIncident(opacity(".market-size", 1), 21300);
 //appear competitors slide
 clip.addIncident(widthMove("100%",".competitors > .rb",400),21300)
 clip.addIncident(opacity1(".competitors .title",500),21700)
-//scroll-stops 400,2700,4500,5500,7700,9900,12900,18300,20900
+clip.addIncident(opacity1(".direct-competitors-list-root > .item",100,"@stagger(0, 500)"),22500)
+clip.addIncident(opacity1(".indirect-competitors-list-root > .item",100,"@stagger(0, 500)"),22500)
+//remove competitors slide
+clip.addIncident(moveRight("100%",".competitors > .rb",400),23100)
+clip.addIncident(moveLeft("100%",".direct",400),23100)
+clip.addIncident(moveLeft("-100%",".indirect",400),23100)
+clip.addIncident(opacity(".competitors", 1), 23500);
+//appear competive-advantages slide
+clip.addIncident(
+  moveTop("0px", ".competive-advantages-title", 500, "@stagger(0, 400)"),
+  23700
+);
+clip.addIncident(
+  moveTop("0px", ".competive-advantages-description", 500, "@stagger(0, 400)"),
+  23900
+);
+clip.addIncident(moveBottom("8%",".competive-advantages > .title",400), 23500)
+clip.addIncident(widthMove("33%",".competive-advantages > .lt",400),23500)
+//remove competive-advantages slide
+clip.addIncident(moveTop("-100px",".competive-advantages-title,.competive-advantages-description",400),24800)
+clip.addIncident(moveLeft("-30%",".competive-advantages > .title",400),24800)
+clip.addIncident(widthMove("0%",".competive-advantages > .lt",400),24800)
+clip.addIncident(opacity(".competive-advantages",1),25200)
+//appear competitor-approach slide
+clip.addIncident(moveTop("5%",".competitor-approach > .title",400),25200)
+clip.addIncident(
+  moveTop("0px", ".competitor-approach-title", 500, "@stagger(0, 400)"),
+  25400
+);
+clip.addIncident(
+  moveTop("0px", ".competitor-approach-description", 500, "@stagger(0, 400)"),
+  25600
+);
+
+
+//scroll-stops 400,2700,4500,5500,7700,9900,12900,18300,20900,23100,24800
