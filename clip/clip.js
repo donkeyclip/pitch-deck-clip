@@ -223,15 +223,35 @@ clip.addIncident(moveLeft("-30%",".competive-advantages > .title",400),24800)
 clip.addIncident(widthMove("0%",".competive-advantages > .lt",400),24800)
 clip.addIncident(opacity(".competive-advantages",1),25200)
 //appear competitor-approach slide
-clip.addIncident(moveTop("5%",".competitor-approach > .title",400),25200)
+clip.addIncident(moveTop("8%",".competitor-approach > .title",500),25200)
 clip.addIncident(
-  moveTop("0px", ".competitor-approach-title", 500, "@stagger(0, 400)"),
-  25400
+  moveTop("0px", ".competitor-approach-title", 400, "@stagger(0, 400)"),
+  25500
+);
+clip.addIncident(
+  opacity1(".competitor-approach-icon-wrapper", 100, "@stagger(0, 400)"),
+  25500
 );
 clip.addIncident(
   moveTop("0px", ".competitor-approach-description", 500, "@stagger(0, 400)"),
-  25600
+  25700
 );
+//remove competitor-approach slide
+clip.addIncident(moveTop("-100px",".competitor-approach-title,.competitor-approach-description",400),26600)
+clip.addIncident(moveLeft("100%",".competitor-approach-list-root",500),27000)
+clip.addIncident(moveLeft("-50%",".competitor-approach > .title",500),27000)
+clip.addIncident(opacity(".competitor-approach",1),27500)
+//appear model slide
+clip.addIncident(moveLeft("0%",".model-info > .title",400),27500)
+clip.addIncident(moveLeft("0%",".model-info > .subtitle",400),27800)
+clip.addIncident(moveRight("0%",".model .item",400, "@stagger(0, 600)"),27500)
+clip.addIncident(opacity1(".model-description-wrapper",300,"@stagger(0, 600)"),27900)
+//remove model slide
+clip.addIncident(opacity(".model-description-wrapper",300,"@stagger(0, 600)"),28800)
+clip.addIncident(moveRight("-150%",".model .item",400, "@stagger(0, 600)"),29100)
+clip.addIncident(moveLeft("-100%",".model-info",500),30100)
+clip.addIncident(opacity(".model",1),30600)
 
 
-//scroll-stops 400,2700,4500,5500,7700,9900,12900,18300,20900,23100,24800
+
+//scroll-stops 400,2700,4500,5500,7700,9900,12900,18300,20900,23100,24800,26600,28800

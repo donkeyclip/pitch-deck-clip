@@ -1,10 +1,32 @@
 
 <div class="root">
+  <div class="team">
+    <div class="title">{{initParams.team.title}}</div>
+    <div class="team-list-root">
+      <div class="member" mc-for="key,item" mc-of="initParams.model.list">
+          <div class="img"></div>
+          <div class="member-title-wrapper"><div class="{{ 'member-title member-title-' + key }}">{{ item.title }}</div></div>
+          <div class="member-subtitle-wrapper"><div class="{{ 'member-subtitle member-subtitle-' + key }}">{{ item.subtitle }}</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="model">
+    <div class="model-info">
+      <div class="title">{{initParams.model.title}}</div>
+      <div class="subtitle">{{initParams.model.subtitle}}</div>
+    </div>
+    <div class="model-list-root">
+      <div class="item" mc-for="key,item" mc-of="initParams.model.list">
+          <div class="line"></div>
+          <div class="model-description-wrapper"><div class="{{ 'model-description model-description-' + key }}">{{ item }}</div></div>
+      </div>
+    </div>
+  </div>
   <div class="competitor-approach">
     <div class="title">{{initParams.cApproach.title}}</div>
     <div class="competitor-approach-list-root">
       <div mc-for="key,item" mc-of="initParams.cApproach.list" class="flex-row item">
-        <div class="competitor-approach-icon-wrapper"><div class="{{ 'competitor-approach-icon competitor-approach-icon-' + key }}">{{item.icon}}</div></div>
+        <div class="competitor-approach-icon-wrapper"><div class="{{ 'competitor-approach-icon competitor-approach-icon-' + key }}"><img src={{item.icon}}/></div></div>
         <div class="flex-column">
           <div class="competitor-approach-title-wrapper"><div class="{{ 'competitor-approach-title competitor-approach-title-' + key }}">{{item.title}}</div></div>
           <div class="competitor-approach-description-wrapper"><div class="{{ 'competitor-approach-description competitor-approach-description-' + key }}">{{item.description}}</div></div>

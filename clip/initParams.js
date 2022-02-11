@@ -176,20 +176,29 @@ export const initParams = [
         title:"Competitor Approach",
         list:[
           {
-            icon:"",
+            icon:"https://github.com/ElisavetAmpatzidou/pitch-deck/blob/main/demo/assets/approach1.png?raw=true",
             title:"Approach 1",
             description:"How will you set your company from the competition?"
           },
           {
-            icon:"",
+            icon:"https://github.com/ElisavetAmpatzidou/pitch-deck/blob/main/demo/assets/approach2.png?raw=true",
             title:"Approach 2",
             description:"What's your path to reach your customers?"
           },
           {
-            icon:"",
+            icon:"https://github.com/ElisavetAmpatzidou/pitch-deck/blob/main/demo/assets/approach3.png?raw=true",
             title:"Approach 3",
             description:"Events, partnerships, ads - list the effective ways to reach them."
           }
+        ]
+      },
+      model:{
+        title:"Business or Revenue Model",
+        subtitle:"Show the ways your company plans to make money.",
+        list:[
+          "Whether through a graph, timeline, or chart, present the viability of your product or service and tell how your company will operate, make money and achieve goal.",
+          "If you have plenty of ways to make maoney, focus on one main method, such as subscription, ads and transactions.",
+        'Touch up on key metrics here too, such as Life Time Value (LTV) and Customer Acquisition Cost (CAC).'
         ]
       },
       dots:16
