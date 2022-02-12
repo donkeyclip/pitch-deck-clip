@@ -198,7 +198,66 @@ export const initParams = [
         list:[
           "Whether through a graph, timeline, or chart, present the viability of your product or service and tell how your company will operate, make money and achieve goal.",
           "If you have plenty of ways to make maoney, focus on one main method, such as subscription, ads and transactions.",
-        'Touch up on key metrics here too, such as Life Time Value (LTV) and Customer Acquisition Cost (CAC).'
+          "Touch up on key metrics here too, such as Life Time Value (LTV) and Customer Acquisition Cost (CAC)."
+        ]
+      },
+      team:{
+        title:"The Team",
+        list:[
+          {
+            img:"https://github.com/ElisavetAmpatzidou/pitch-deck/blob/main/demo/assets/member1.jpeg?raw=true",
+            title:"Team Member 1",
+            subtitle:"Title"
+          },
+          {
+            img:"https://github.com/ElisavetAmpatzidou/pitch-deck/blob/main/demo/assets/member2.jpeg?raw=true",
+            title:"Team Member 2",
+            subtitle:"Title"
+          },
+          {
+            img:"https://github.com/ElisavetAmpatzidou/pitch-deck/blob/main/demo/assets/member3.jpeg?raw=true",
+            title:"Team Member 3",
+            subtitle:"Title"
+          }
+        ]
+      },
+      future:{
+        title:"Future Roadmap",
+        subtitle:"What are your next steps and goals? How much support do you need form investors and what will it get you?",
+        steps:[
+          {
+            title:"Step1",
+            description:"Q1 2022"
+          },
+          {
+            title:"Step2",
+            description:"Q2 2022"
+          },
+          {
+            title:"Step3",
+            description:"Q3 2022"
+          },
+          {
+            title:"Step4",
+            description:"Q4 2022"
+          }
+        ]
+      },
+      contact:{
+        title:"Contact Us",
+        list:[
+          {
+            icon:"https://github.com/ElisavetAmpatzidou/pitch-deck/blob/main/demo/assets/phone.png?raw=true",
+            info:"012-345-6789"
+          },
+          {
+            icon:"https://github.com/ElisavetAmpatzidou/pitch-deck/blob/main/demo/assets/mail.png?raw=true",
+            info:"hello@contact.com"
+          },
+          {
+            icon:"https://github.com/ElisavetAmpatzidou/pitch-deck/blob/main/demo/assets/website.png?raw=true",
+            info:"www.hello.com"
+          }
         ]
       },
       dots:16

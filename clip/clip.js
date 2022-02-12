@@ -225,7 +225,7 @@ clip.addIncident(opacity(".competive-advantages",1),25200)
 //appear competitor-approach slide
 clip.addIncident(moveTop("8%",".competitor-approach > .title",500),25200)
 clip.addIncident(
-  moveTop("0px", ".competitor-approach-title", 400, "@stagger(0, 400)"),
+  moveLeft("0px", ".competitor-approach-title", 400, "@stagger(0, 400)"),
   25500
 );
 clip.addIncident(
@@ -251,7 +251,43 @@ clip.addIncident(opacity(".model-description-wrapper",300,"@stagger(0, 600)"),28
 clip.addIncident(moveRight("-150%",".model .item",400, "@stagger(0, 600)"),29100)
 clip.addIncident(moveLeft("-100%",".model-info",500),30100)
 clip.addIncident(opacity(".model",1),30600)
-
-
-
-//scroll-stops 400,2700,4500,5500,7700,9900,12900,18300,20900,23100,24800,26600,28800
+//appear team slide
+clip.addIncident(moveLeft("5%",".team > .title",400),30600)
+clip.addIncident(opacity1(".member img",200,"@stagger(0, 1000)"),30800)
+clip.addIncident(
+  moveTop("0px", ".member-title", 400, "@stagger(0, 1000)"),
+  31000
+);
+clip.addIncident(
+  moveTop("0px", ".member-subtitle", 400, "@stagger(0, 1000)"),
+  31200
+);
+clip.addIncident(widthMove("90%",".team > .lt",500),32100)
+//remove team slide
+clip.addIncident(moveLeft("100%",".team > .lt,.team-list-root",500),32600)
+clip.addIncident(moveLeft("-60%",".team > .title",400),32700)
+clip.addIncident(opacity(".team",1),33100)
+//appear future slide
+clip.addIncident(moveLeft("0%",".future-info > .title",400),33100)
+clip.addIncident(moveLeft("0%",".future-info > .subtitle",400),33400)
+clip.addIncident(opacity1(".future-id",100,"@stagger(0, 1000)"),33800)
+clip.addIncident(
+  moveTop("0px", ".future-title", 400, "@stagger(0, 1000)"),
+  33900
+);
+clip.addIncident(
+  moveTop("0px", ".future-description", 400, "@stagger(0, 1000)"),
+  34000
+);
+clip.addIncident(heightMove("100%",".future > .lt",2000),33800)
+//remove future slide
+clip.addIncident(moveLeft("-100%",".future-info",400),35800)
+clip.addIncident(moveTop("-100px",".future-title,.future-description",400),35800)
+clip.addIncident(moveTop("100%",".future > .lt",400),35800)
+clip.addIncident(opacity(".future-id",100,"@stagger(0, 100)"),35800)
+clip.addIncident(opacity(".future",1),36200)
+//arrear contact slide
+clip.addIncident(moveBottom("8%",".contact > .title",400),36200)
+clip.addIncident(widthMove("35%",".contact > .rb",400),36200)
+clip.addIncident(moveLeft("0px",".contact-info",400),36500)
+//scroll-stops 400,2700,4500,5500,7700,9900,12900,18300,20900,23100,24800,26600,28800,32600,35800

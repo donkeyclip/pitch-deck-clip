@@ -38,7 +38,7 @@ export const opacity = (selector, duration, delay = 0, easing = "linear") =>
     }
   );
 
-  export const opacity1 = (selector, duration, delay = 0, easing = "linear") =>
+export const opacity1 = (selector, duration, delay = 0, easing = "linear") =>
   new CSSEffect(
     {
       animatedAttrs: {
@@ -53,7 +53,13 @@ export const opacity = (selector, duration, delay = 0, easing = "linear") =>
     }
   );
 
-  export const moveTop = (top,selector, duration, delay = 0, easing = "linear") =>
+export const moveTop = (
+  top,
+  selector,
+  duration,
+  delay = 0,
+  easing = "linear"
+) =>
   new CSSEffect(
     {
       animatedAttrs: {
@@ -64,11 +70,17 @@ export const opacity = (selector, duration, delay = 0, easing = "linear") =>
       selector,
       duration,
       easing,
-      delay
+      delay,
     }
   );
 
-  export const moveBottom = (bottom,selector, duration, delay = 0, easing = "linear") =>
+export const moveBottom = (
+  bottom,
+  selector,
+  duration,
+  delay = 0,
+  easing = "linear"
+) =>
   new CSSEffect(
     {
       animatedAttrs: {
@@ -79,11 +91,17 @@ export const opacity = (selector, duration, delay = 0, easing = "linear") =>
       selector,
       duration,
       easing,
-      delay
+      delay,
     }
   );
 
-  export const moveLeft = (left,selector, duration, delay = 0, easing = "linear") =>
+export const moveLeft = (
+  left,
+  selector,
+  duration,
+  delay = 0,
+  easing = "linear"
+) =>
   new CSSEffect(
     {
       animatedAttrs: {
@@ -94,11 +112,17 @@ export const opacity = (selector, duration, delay = 0, easing = "linear") =>
       selector,
       duration,
       easing,
-      delay
+      delay,
     }
   );
 
-  export const moveRight = (right,selector, duration, delay = 0, easing = "linear") =>
+export const moveRight = (
+  right,
+  selector,
+  duration,
+  delay = 0,
+  easing = "linear"
+) =>
   new CSSEffect(
     {
       animatedAttrs: {
@@ -109,11 +133,11 @@ export const opacity = (selector, duration, delay = 0, easing = "linear") =>
       selector,
       duration,
       easing,
-      delay
+      delay,
     }
   );
 
-  export const heightMove = (height,selector, duration, easing = "linear") =>
+export const heightMove = (height, selector, duration, easing = "linear") =>
   new CSSEffect(
     {
       animatedAttrs: {
@@ -127,7 +151,7 @@ export const opacity = (selector, duration, delay = 0, easing = "linear") =>
     }
   );
 
-  export const widthMove = (width,selector, duration, easing = "linear") =>
+export const widthMove = (width, selector, duration, easing = "linear") =>
   new CSSEffect(
     {
       animatedAttrs: {
@@ -141,22 +165,34 @@ export const opacity = (selector, duration, delay = 0, easing = "linear") =>
     }
   );
 
-export const riple = (rows,columns,startRow ,startCol, minDelay,maxDelay,attrs,selector) => {
-  const maxY= (startCol + 1)*2 <= columns ? columns-1 - startCol:startCol;
-  const maxX= (startRow + 1)*2 <= rows ? rows-1 - startRow:startRow;
-  const maxDistance = Math.pow(maxX,2) + Math.pow(maxY,2);
+export const riple = (
+  rows,
+  columns,
+  startRow,
+  startCol,
+  minDelay,
+  maxDelay,
+  attrs,
+  selector
+) => {
+  const maxY =
+    (startCol + 1) * 2 <= columns ? columns - 1 - startCol : startCol;
+  const maxX = (startRow + 1) * 2 <= rows ? rows - 1 - startRow : startRow;
+  const maxDistance = Math.pow(maxX, 2) + Math.pow(maxY, 2);
   return new CSSEffect(
     {
-      animatedAttrs: {...attrs}
+      animatedAttrs: { ...attrs },
     },
     {
       selector,
       duration: 125,
       easing: "linear",
-      delay:`@expression(${minDelay}+(pow(floor(index/${columns})-${startRow},2)+pow(index % ${columns}-${startCol},2))*${maxDelay-minDelay}/${maxDistance})`
+      delay: `@expression(${minDelay}+(pow(floor(index/${columns})-${startRow},2)+pow(index % ${columns}-${startCol},2))*${
+        maxDelay - minDelay
+      }/${maxDistance})`,
     }
   );
-}
+};
 // export const newGraph = new MCGraphs.LineGraph(
 //   {
 //     data: graphData,

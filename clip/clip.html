@@ -1,10 +1,36 @@
-
 <div class="root">
+  <div class="contact">
+    <div class="rb"></div>
+    <div class="contact-list-root">
+      <div class="item" mc-for="key,item" mc-of="initParams.contact.list">
+        <div class="icon"><img src={{item.icon}}/></div>
+        <div class="contact-info-wrapper"><div class="{{ 'contact-info contact-info-' + key }}">{{ item.info }}</div></div>
+      </div>
+    </div>
+    <div class="title">{{initParams.contact.title}}</div>
+  </div>
+  <div class="future">
+    <div class="lt"></div>
+    <div class="future-info">
+      <div class="title">{{initParams.future.title}}</div>
+      <div class="subtitle">{{initParams.future.subtitle}}</div>
+    </div>
+    <div class="future-list-root">
+      <div class="step" mc-for="key,item" mc-of="initParams.future.steps">
+          <div class="future-id-wrapper"><div class="future-id">{{key+1}}</div></div>
+          <div>
+            <div class="future-title-wrapper"><div class="{{ 'future-title future-title-' + key }}">{{ item.title }}</div></div>
+            <div class="future-description-wrapper"><div class="{{ 'future-description future-description-' + key }}">{{ item.description }}</div></div>
+          </div>
+      </div>
+    </div>
+  </div>
   <div class="team">
+    <div class="lt"></div>
     <div class="title">{{initParams.team.title}}</div>
     <div class="team-list-root">
-      <div class="member" mc-for="key,item" mc-of="initParams.model.list">
-          <div class="img"></div>
+      <div class="member" mc-for="key,item" mc-of="initParams.team.list">
+          <div class="img"><img src={{item.img}}/></div>
           <div class="member-title-wrapper"><div class="{{ 'member-title member-title-' + key }}">{{ item.title }}</div></div>
           <div class="member-subtitle-wrapper"><div class="{{ 'member-subtitle member-subtitle-' + key }}">{{ item.subtitle }}</div></div>
       </div>

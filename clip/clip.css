@@ -31,7 +31,8 @@
 .traction,.target-market,
 .market-size,.competitors,
 .competive-advantages,
-.competitor-approach,.model{
+.competitor-approach,.model,
+.team,.future,.contact{
   position: absolute;
   width: 100%;
   height: 100%;
@@ -125,7 +126,7 @@
   width: 35%;
   display: flex;
   flex-direction: column;
-  top: 60%;
+  top: 40%;
   left: 5%;
   overflow: hidden;
 }
@@ -147,7 +148,7 @@
   flex-direction: column;
 }
 
-.model-info{
+.model-info,.future-info{
   position: absolute;
   width: 45%;
   height: 80%;
@@ -304,7 +305,7 @@
   left:100%;
 }
 
-.model-info > .title{
+.model-info > .title,.future-info > .title{
   font-size: 70px;
   font-weight: 700;
   position: relative;
@@ -312,12 +313,25 @@
   left: -100%;
 }
 
-.model-info > .subtitle{
+.team > .title{
+  font-size: 70px;
+  font-weight: 700;
+  position: absolute;
+  width: 60%;
+  left: -100%;
+  top: 8%;
+}
+
+.model-info > .subtitle,.future-info > .subtitle{
   font-size: 30px;
   font-weight: 400;
   position: relative;
   width: 49%;
   left: -100%;
+}
+
+.future-info > .subtitle{
+  width:60%;
 }
 
 .problem > .rb{
@@ -423,6 +437,17 @@
   top:8%;
 }
 
+.team-list-root{
+  width: 90%;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  left: 5%;
+  top:30%;
+  height: 70%;
+}
+
 .market-size-number{
   background: var(--secondary);
   font-size: 40px;
@@ -451,7 +476,9 @@
 .competive-advantages-title-wrapper,
 .competive-advantages-description-wrapper,
 .competitor-approach-title-wrapper,
-.competitor-approach-description-wrapper{
+.competitor-approach-description-wrapper,
+.member-title-wrapper,.member-subtitle-wrapper,.future-title-wrapper,
+.future-description-wrapper,.contact-info-wrapper{
   position: relative;
   overflow: hidden;
   margin-top: 40px;
@@ -470,8 +497,7 @@
 }
 
 .problem-title,.solution-title,
-.step-title,.competive-advantages-title,
-.competitor-approach-title{
+.step-title,.competive-advantages-title,.member-title,.future-title{
   font-size: 50px;
   font-weight: 700;
   position: relative;
@@ -480,11 +506,26 @@
 
 .problem-description,.solution-description,
 .step-date,.competive-advantages-description,
-.competitor-approach-description{
+.competitor-approach-description,
+.member-subtitle,.future-description{
   font-size: 30px;
   font-weight: 400;
   position: relative;
   top: -100px;
+}
+
+.competitor-approach-title{
+  font-size: 50px;
+  font-weight: 700;
+  position: relative;
+  left: -100%;
+}
+
+.contact-info{
+  font-size: 30px;
+  font-weight: 400;
+  position: relative;
+  left: -100%;
 }
 
 .target-market-title{
@@ -703,4 +744,90 @@
   width: 100%;
   height: 5px;
   background: var(--secondary);
+}
+
+.team .member{
+  display: flex;
+  flex-direction: column;
+}
+
+.member img{
+  width: 50%;
+  border-radius: 100%;
+  opacity: 0;
+}
+
+.team > .lt{
+  width: 0;
+  left: 0;
+  top:25%;
+  height: 60%;
+}
+.future-list-root{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 80%;
+  width: 20%;
+  left: 50%;
+  top: 10%;
+
+}
+
+.future-list-root > .step{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.future-id{
+  font-size: 40px;
+  font-weight: 700;
+  width: 55px;
+  height: 55px;
+  background:var(--secondary);
+  border-radius: 20px;
+  text-align: center;
+  opacity: 0;
+}
+
+.future > .lt{
+  width: 2px;
+  height: 0%;
+  left: 54%;
+  top:0%;
+}
+
+.contact .item{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contact > .title{
+  font-size: 100px;
+  font-weight: 700;
+  bottom:-50%;
+  right:5%;
+  position: absolute;
+}
+
+.contact-list-root{
+  width: 90%;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  left: 5%;
+  top:15%;
+}
+
+.contact > .rb{
+  bottom: 5%;
+  height: 18%;
+  width: 0%;
+  right: 0%;
 }
