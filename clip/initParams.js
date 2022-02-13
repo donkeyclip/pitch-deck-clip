@@ -242,7 +242,7 @@ export const initParams = [
         list:[
           "Whether through a graph, timeline, or chart, present the viability of your product or service and tell how your company will operate, make money and achieve goal.",
           "If you have plenty of ways to make maoney, focus on one main method, such as subscription, ads and transactions.",
-          "Touch up on key metrics here too, such as Life Time Value (LTV) and Customer Acquisition Cost (CAC)."
+          "Touch up on metrics here too, such as Life Time Value (LTV) and Customer Acquisition Cost (CAC)."
         ]
       },
       team:{
