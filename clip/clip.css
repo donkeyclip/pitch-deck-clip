@@ -478,10 +478,15 @@
 .competitor-approach-title-wrapper,
 .competitor-approach-description-wrapper,
 .member-title-wrapper,.member-subtitle-wrapper,.future-title-wrapper,
-.future-description-wrapper,.contact-info-wrapper{
+.future-description-wrapper{
   position: relative;
   overflow: hidden;
   margin-top: 40px;
+}
+
+.contact-info-wrapper{
+  position: relative;
+  overflow: hidden;
 }
 
 .flex-column{
@@ -517,13 +522,6 @@
 .competitor-approach-title{
   font-size: 50px;
   font-weight: 700;
-  position: relative;
-  left: -100%;
-}
-
-.contact-info{
-  font-size: 30px;
-  font-weight: 400;
   position: relative;
   left: -100%;
 }
@@ -830,4 +828,34 @@
   height: 18%;
   width: 0%;
   right: 0%;
+}
+
+.contact .icon{
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  background: var(--secondary);
+  margin: 10px;
+  opacity: 0;
+}
+
+.contact img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.contact-info{
+  font-size: 30px;
+  font-weight: 400;
+  position: relative;
+  left: -100%;
+}
+
+.traction .chart{
+  top:8%;
+  position: absolute;
+  left: 320px;
 }

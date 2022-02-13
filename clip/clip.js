@@ -2,6 +2,7 @@ import { HTMLClip, CSSEffect } from "@donkeyclip/motorcortex";
 import html from "./clip.html";
 import css from "!!raw-loader!./clip.css";
 import {
+  lineGraph,
   scaleOne,
   heightMove,
   widthMove,
@@ -150,6 +151,7 @@ clip.addIncident(
   widthMove("6%", ".traction > .lt,.traction > .rb", 700),
   10900
 );
+clip.addIncident(lineGraph,10900)
 /////// duration:5000 timings: {intro: 2000,static: 1000,outro: 2000},starttime:10900
 //remove traction slide
 clip.addIncident(
@@ -289,5 +291,7 @@ clip.addIncident(opacity(".future",1),36200)
 //arrear contact slide
 clip.addIncident(moveBottom("8%",".contact > .title",400),36200)
 clip.addIncident(widthMove("35%",".contact > .rb",400),36200)
-clip.addIncident(moveLeft("0px",".contact-info",400),36500)
-//scroll-stops 400,2700,4500,5500,7700,9900,12900,18300,20900,23100,24800,26600,28800,32600,35800
+clip.addIncident(moveLeft("0px",".contact-info",400,"@stagger(0,1000)"),36600)
+clip.addIncident(opacity1(".contact .icon",100,"@stagger(0, 1000)"),36500)
+
+//scroll-stops 400,2700,4500,5500,7700,9900,12900,18300,20900,23100,24800,26600,28800,32600,35800,36500

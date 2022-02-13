@@ -1,6 +1,6 @@
 import { CSSEffect, loadPlugin } from "@donkeyclip/motorcortex";
 import MCGraphsDef from "@donkeyclip/motorcortex-graphs";
-const MCGraphs = loadPlugin(MCGraphsDef);
+const Graph = loadPlugin(MCGraphsDef);
 
 export const scaleOne = (selector, duration, easing = "linear") =>
   new CSSEffect(
@@ -193,19 +193,114 @@ export const riple = (
     }
   );
 };
-// export const newGraph = new MCGraphs.LineGraph(
+export const lineGraph =  
+new Graph.LineGraph(
+  {
+    data: {
+    "title": "",
+    "maxValue": 40,
+    "hover": false,
+    "showGrid":false,
+    "dataSets": [
+      {
+        "title": "PhaseA",
+        "color": "#ff1f4c"
+      },
+      {
+        "title": "PhaseB",
+        "color": "#ff82ad"
+      }
+    ],
+    "data": [
+      {
+        "name": "Id1",
+        "values": [10, 18]
+      },
+      {
+        "name": "Id2",
+        "values": [15, 27]
+      },
+      {
+        "name": "Id3",
+        "values": [29, 23]
+      },
+      {
+        "name": "Id4",
+        "values": [31, 35]
+      },
+      {
+        "name": "Id5",
+        "values": [29, 23]
+      },
+      {
+        "name": "Id6",
+        "values": [15, 27]
+      },
+      {
+        "name": "Id7",
+        "values": [10, 18]
+      }
+    ]
+  },
+    trace: {
+      toggle: false,
+      scale: 1.45,
+    },
+    legend: true,
+    timings: {
+      intro: 2000,
+      static: 1000,
+      outro: 2000,
+    },
+    palette: {
+            accent: "#fff",
+            primary: "#ffffff42", //grames
+            font: "#2d2d2d",
+            secondary: "#2d2d2d", //background color
+            quinary: "#fff",
+            senary: "#fff",
+          },
+    font: {
+      size: "1.7rem",
+    },
+  },
+  {
+    selector: ".chart",
+    containerParams: {
+      width: "1280px",
+      height: "780px",
+    },
+  }
+);
+// export const lineGraph =  (title,maxValue,dataSets,data)=> 
+// new Graph.LineGraph(
 //   {
-//     data: graphData,
+//     data: {
+//     "title": title,
+//     "maxValue": maxValue,
+//     "hover": false,
+//     "showGrid":false,
+//     "dataSets": dataSets,
+//     "data": data
+//   },
 //     trace: {
 //       toggle: false,
 //       scale: 1.45,
 //     },
 //     legend: true,
 //     timings: {
-//       intro: 7000,
+//       intro: 2000,
 //       static: 1000,
-//       outro: 7000,
+//       outro: 2000,
 //     },
+//     palette: {
+//             accent: "#fff",
+//             primary: "#ffffff42", //grames
+//             font: "#2d2d2d",
+//             secondary: "#2d2d2d", //background color
+//             quinary: "#fff",
+//             senary: "#fff",
+//           },
 //     font: {
 //       size: "1.7rem",
 //     },
@@ -213,8 +308,8 @@ export const riple = (
 //   {
 //     selector: ".chart",
 //     containerParams: {
-//       width: "1024px",
-//       height: "768px",
+//       width: "1280px",
+//       height: "780px",
 //     },
 //   }
 // );

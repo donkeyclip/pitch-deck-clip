@@ -99,7 +99,51 @@ export const initParams = [
       },
       traction:{
         title:"Traction",
-        subtitle:"Where is your company currently at? Visualize with a graph to highlight important developments."
+        subtitle:"Where is your company currently at? Visualize with a graph to highlight important developments.",  
+        graphData:{
+          title:"",
+          maxValue:40,
+          dataSets:[
+            {
+              "title": "PhaseA",
+              "color": "#ff1f4c"
+            },
+            {
+              "title": "PhaseB",
+              "color": "#ff82ad"
+            }
+          ],
+          data:[
+            {
+              "name": "Id1",
+              "values": [10, 18]
+            },
+            {
+              "name": "Id2",
+              "values": [15, 27]
+            },
+            {
+              "name": "Id3",
+              "values": [29, 23]
+            },
+            {
+              "name": "Id4",
+              "values": [31, 35]
+            },
+            {
+              "name": "Id5",
+              "values": [29, 23]
+            },
+            {
+              "name": "Id6",
+              "values": [15, 27]
+            },
+            {
+              "name": "Id7",
+              "values": [10, 18]
+            }
+          ],
+        }
       },
       targetMarket:{
         title:"Target Market",
