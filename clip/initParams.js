@@ -59,7 +59,7 @@ export const initParams = [
       product:{
         title:"Product or Service",
         description:"Introduce your company's product or service as the ultimate solution to these problems",
-        img:""
+        img:"https://github.com/ElisavetAmpatzidou/pitch-deck/blob/main/demo/assets/robot.png?raw=true"
       },
       timeline:{
         title:"Birth of Productor Service",
@@ -84,18 +84,18 @@ export const initParams = [
         reasons:[
           {
             title:"Reason 1",
-            description:'Why is "now" the best time for your company to rise and go to the next level?',
+            description:"List 1-3 reasons to explain your decision about timing."
           },
           {
             title:"Reason 2",
+            description:'Why is "now" the best time for your company to rise and go to the next level?',
+          },
+          {
+            title:"Reason 3",
             description:"What arre the trends these days that make your product or service possible?"
           }
         ],
-        img:{
-          url:"",
-          width:"650px",
-          height:"813px"
-        }
+        img:"https://github.com/ElisavetAmpatzidou/pitch-deck/blob/main/demo/assets/startup.jpeg?raw=true"
       },
       traction:{
         title:"Traction",
@@ -148,13 +148,18 @@ export const initParams = [
       targetMarket:{
         title:"Target Market",
         subtitle:"Who are the customers you want to care to?",
+        img:"https://github.com/ElisavetAmpatzidou/pitch-deck/blob/main/demo/assets/target-market.jpeg?raw=true",
         list:[
           {
             title:"Target Market 1",
-            description:"What are their profiles and visual personas?"
+            description:"List 1-3 profiles who are interest about your product or service"
           },
           {
             title:"Target Market 2",
+            description:"What are their profiles and visual personas?"
+          },
+          {
+            title:"Target Market 3",
             description:"Visualize the people who will turn to you for solutions."
           }
         ]

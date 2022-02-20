@@ -3,7 +3,6 @@
   --secondary:{{ initParams.styles.secondary }};
   --accent:{{ initParams.styles.accent }};
   --fontFamily:{{initParams.styles.font}}
-  --timingImgWidth:{{initParams.timing.img.width}};
 }
 
 .root {
@@ -126,7 +125,7 @@
   width: 35%;
   display: flex;
   flex-direction: column;
-  top: 40%;
+  top: 37%;
   left: 5%;
   overflow: hidden;
 }
@@ -137,15 +136,15 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  top: 5%;
-  left: 5%;
   height: 85%;
   overflow: hidden;
 }
 
 .target-market-info{
+  position: relative;
   display: flex;
   flex-direction: column;
+  left: 5%;
 }
 
 .model-info,.future-info{
@@ -245,7 +244,7 @@
 }
 
  .timing-title{
-  font-size: 70px;
+  font-size: 50px;
   font-weight: 700;
   left:-100%;
   position: relative;
@@ -387,7 +386,10 @@
 }
 
 .target-market-list-root{
+  position: relative;
   width: 65%;
+  left: 5%;
+  top: 5%;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -437,15 +439,64 @@
   top:8%;
 }
 
+.team .member{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .team-list-root{
   width: 90%;
-  position: absolute;
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   left: 5%;
   top:30%;
-  height: 70%;
+}
+
+.member-title{
+  font-size: 50px;
+  font-weight: 700;
+  position: relative;
+  top: -150px;
+}
+
+.member-subtitle{
+  font-size: 30px;
+  font-weight: 400;
+  position: relative;
+  top: -100px;
+}
+
+.member .img{
+  width: 250px;
+  height: 250px;
+  border-radius: 100%;
+  opacity: 0;
+}
+
+.team-list-root-five,.team-list-root-seven{
+  top:25%;
+  flex-wrap: wrap;
+  row-gap: 50px;
+}
+
+.team-list-root-five .member .img,.team-list-root-seven .member .img{
+  width: 150px;
+  height: 150px;
+}
+
+.team-list-root-five .member-title,.team-list-root-seven .member-title{
+  font-size: 40px;
+}
+
+.team-list-root-five .member{
+  flex-basis:30%;
+}
+
+.team-list-root .member{
+  flex-basis:23%;
 }
 
 .market-size-number{
@@ -472,7 +523,6 @@
 .solution-description-wrapper,
 .step-title-wrapper,.step-date-wrapper,
 .timing-title-wrapper,
-.timing-description-wrapper,
 .competive-advantages-title-wrapper,
 .competive-advantages-description-wrapper,
 .competitor-approach-title-wrapper,
@@ -482,6 +532,12 @@
   position: relative;
   overflow: hidden;
   margin-top: 40px;
+}
+
+.timing-description-wrapper{
+  position: relative;
+  overflow: hidden;
+  margin-top: 5px;
 }
 
 .contact-info-wrapper{
@@ -502,7 +558,7 @@
 }
 
 .problem-title,.solution-title,
-.step-title,.competive-advantages-title,.member-title,.future-title{
+.step-title,.competive-advantages-title,.future-title{
   font-size: 50px;
   font-weight: 700;
   position: relative;
@@ -512,7 +568,7 @@
 .problem-description,.solution-description,
 .step-date,.competive-advantages-description,
 .competitor-approach-description,
-.member-subtitle,.future-description{
+.future-description{
   font-size: 30px;
   font-weight: 400;
   position: relative;
@@ -547,12 +603,19 @@
   height: 0;
 }
 
-.product img{
+.product .img{
+  background: url({{initParams.product.img}});
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-60%,-50%);
-  width: 0;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  height: 50%;
+  width: 50%;
+  
 }
 
 .calendar{
@@ -567,22 +630,29 @@
   text-align: right;
 }
 
-.timing img{
+.timing .img{
+  background: url({{initParams.timing.img}});
+  width: 650px;
+  height: 813px;
   position: absolute;
   right: 15%;
   top: -100%;
+  background-position: center;
+  background-size: cover;
 }
 
-.target-market img{
-  width:30%;
+.target-market .img{
+  width: 600px;
+  height: 600px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   right:-50%;
+  background: url({{initParams.targetMarket.img}});
+  background-position: center;
+  background-size: cover;
 }                                                                                                                                                                                                                                                         
-/* .timing > .rb{
-  width: var(--timingImgWidth);
-} */
+
 
 .timing >.lt{
   width: 0%;
@@ -607,11 +677,11 @@
   height: 50%;
 }
 
-.target-market > .lt{
-  left: 0%;
-  width: 0%;
-  top: 0%;
-  height: 40%;
+.target-market-list-root >  .lt{
+  left: -10%;
+  width: 10%;
+  top: -10%;
+  height: 120%;
 }
 
 .target-market > .rb{
@@ -631,8 +701,8 @@
   position:absolute;
   display: flex;
   flex-direction: row;
-  top: 8%;
-  justify-content: space-between;
+  top: 18%;
+  justify-content: space-around;
   align-items: center;
   width: 90%;
   left: 5%;
@@ -642,8 +712,8 @@
   position:absolute;
   display: flex;
   flex-direction: row;
-  bottom: 10%;
-  justify-content: space-between;
+  bottom: 18%;
+  justify-content: space-around;
   align-items: center;
   width: 90%;
   left: 5%;
@@ -656,13 +726,26 @@
 
 .indirect-competitors-icon-wrapper{
   background: var(--primary);
-  border-radius: 100%;
+  border-radius: 25px;
 }
+
+.direct-competitors-icon,.indirect-competitors-icon{
+  width: 40px;
+  height: 40px;
+  margin-top: 30px;
+}
+
 
 .competitor-approach-icon-wrapper{
   background: var(--secondary);
   border-radius: 25px;
   opacity: 0;
+}
+
+.competitor-approach-icon{
+  width: 90px;
+  height: 90px;
+  margin: 30px;
 }
 
 .competitors-list-root{
@@ -676,10 +759,6 @@
 
 .indirect-competitors-list-root{
   flex-direction: row-reverse;
-}
-
-.competitors-icon-wrapper img,.competitor-approach-icon-wrapper img{
-  padding: 30px;
 }
 
 .competitors-list-root > .item{
@@ -744,22 +823,11 @@
   background: var(--secondary);
 }
 
-.team .member{
-  display: flex;
-  flex-direction: column;
-}
-
-.member img{
-  width: 50%;
-  border-radius: 100%;
-  opacity: 0;
-}
-
-.team > .lt{
+.team .lt{
   width: 0;
-  left: 0;
-  top:25%;
-  height: 60%;
+  left: -10%;
+  top:-10%;
+  height: 120%;
 }
 .future-list-root{
   position: absolute;
@@ -830,7 +898,7 @@
   right: 0%;
 }
 
-.contact .icon{
+.contact .icon-wrapper{
   position: relative;
   width: 100px;
   height: 100px;
@@ -840,11 +908,13 @@
   opacity: 0;
 }
 
-.contact img{
+.contact .icon{
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
 }
 
 .contact-info{

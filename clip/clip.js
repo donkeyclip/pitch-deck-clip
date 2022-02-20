@@ -105,12 +105,12 @@ clip.addIncident(opacity(".solution", 1), 5000);
 clip.addIncident(moveLeft("5%", ".product-info > .title", 500), 5000);
 clip.addIncident(moveLeft("20%", ".product-info > .description", 500), 5000);
 clip.addIncident(heightMove("45%", ".product > .lt", 500), 5000);
-clip.addIncident(widthMove("25%", ".product img", 500), 5000);
+clip.addIncident(opacity1(".product .img", 500), 5000);
 //remove product slide
 clip.addIncident(moveLeft("-100%", ".product-info > .title", 500), 5500);
 clip.addIncident(moveLeft("100%", ".product-info > .description", 500), 5500);
 clip.addIncident(moveTop("100%", ".product > .lt", 500), 5900);
-clip.addIncident(moveTop("140%", ".product img", 500), 5900);
+clip.addIncident(moveTop("140%", ".product .img", 500), 5900);
 clip.addIncident(opacity(".product", 1), 6400);
 //appear timeline slide
 clip.addIncident(heightMove("100%", ".timeline > .lt", 1100), 6400);
@@ -127,7 +127,7 @@ clip.addIncident(widthMove("0%", ".timeline > .rb", 500), 7800);
 clip.addIncident(opacity(".timeline", 1), 8600);
 //appear timing slide
 clip.addIncident(moveTop("13%", ".timing > .title", 700), 8600);
-clip.addIncident(moveTop("0%", ".timing img", 800), 8600);
+clip.addIncident(moveTop("0%", ".timing .img", 800), 8600);
 clip.addIncident(
   moveLeft("5%", ".timing-title", 500, "@stagger(0, 400)"),
   8600
@@ -142,7 +142,7 @@ clip.addIncident(heightMove("80%", ".timing > .rb", 800), 8600);
 clip.addIncident(widthMove("0%", ".timing > .lt", 500), 9900);
 clip.addIncident(moveLeft("-50%", ".timing > .title", 900), 9900);
 clip.addIncident(moveLeft("-50%", ".timing > .timing-info", 900), 10000);
-clip.addIncident(moveTop("100%", ".timing img", 500), 10000);
+clip.addIncident(moveTop("100%", ".timing .img", 500), 10000);
 clip.addIncident(moveBottom("100%", ".timing > .rb", 500), 10000);
 clip.addIncident(opacity(".timing", 1), 10900);
 //appear traction slide
@@ -163,7 +163,7 @@ clip.addIncident(moveLeft("100%", ".traction > .lt", 400), 16300);
 clip.addIncident(moveRight("100%", ".traction > .rb", 400), 16300);
 clip.addIncident(opacity(".traction", 1), 16700);
 //appear target-market slide
-clip.addIncident(moveRight("5%", ".target-market img", 500), 16700);
+clip.addIncident(moveRight("5%", ".target-market .img", 500), 16700);
 clip.addIncident(moveLeft("0%", ".target-market-info > .title", 500), 16700);
 clip.addIncident(moveLeft("0%", ".target-market-info > .subtitle", 500), 17000);
 clip.addIncident(
@@ -174,15 +174,15 @@ clip.addIncident(
   moveLeft("0%", ".target-market-description", 500, "@stagger(0, 400)"),
   17400
 );
-clip.addIncident(widthMove("50%", ".target-market > .lt", 500), 16700);
+clip.addIncident(widthMove("130%", ".target-market  .lt", 500), 16700);
 clip.addIncident(heightMove("50%", ".target-market > .rb", 500), 16700);
 //remove target-market slide
 clip.addIncident(heightMove("0%", ".target-market > .rb", 500), 18300);
 clip.addIncident(
-  moveLeft("-100%", ".target-market > .text, .target-market > .lt", 500),
+  moveLeft("-100%", ".target-market > .text, .target-market  .lt", 500),
   18300
 );
-clip.addIncident(moveRight("100%", ".target-market img", 500), 18800);
+clip.addIncident(moveRight("100%", ".target-market .img", 500), 18800);
 clip.addIncident(opacity(".target-market", 1), 19300);
 //appear market-size slide
 clip.addIncident(moveLeft("5%", ".market-size-info > .title", 500), 19300);
@@ -255,7 +255,7 @@ clip.addIncident(moveLeft("-100%",".model-info",500),30100)
 clip.addIncident(opacity(".model",1),30600)
 //appear team slide
 clip.addIncident(moveLeft("5%",".team > .title",400),30600)
-clip.addIncident(opacity1(".member img",200,"@stagger(0, 1000)"),30800)
+clip.addIncident(opacity1(".member .img",200,"@stagger(0, 1000)"),30800)
 clip.addIncident(
   moveTop("0px", ".member-title", 400, "@stagger(0, 1000)"),
   31000
@@ -264,9 +264,9 @@ clip.addIncident(
   moveTop("0px", ".member-subtitle", 400, "@stagger(0, 1000)"),
   31200
 );
-clip.addIncident(widthMove("90%",".team > .lt",500),32100)
+clip.addIncident(widthMove("110%",".team .lt",500),32100)
 //remove team slide
-clip.addIncident(moveLeft("100%",".team > .lt,.team-list-root",500),32600)
+clip.addIncident(moveLeft("100%",".team-list-root",500),32600)
 clip.addIncident(moveLeft("-60%",".team > .title",400),32700)
 clip.addIncident(opacity(".team",1),33100)
 //appear future slide
@@ -292,6 +292,6 @@ clip.addIncident(opacity(".future",1),36200)
 clip.addIncident(moveBottom("8%",".contact > .title",400),36200)
 clip.addIncident(widthMove("35%",".contact > .rb",400),36200)
 clip.addIncident(moveLeft("0px",".contact-info",400,"@stagger(0,1000)"),36600)
-clip.addIncident(opacity1(".contact .icon",100,"@stagger(0, 1000)"),36500)
+clip.addIncident(opacity1(".contact .icon-wrapper",100,"@stagger(0, 1000)"),36500)
 
 //scroll-stops 400,2700,4500,5500,7700,9900,12900,18300,20900,23100,24800,26600,28800,32600,35800,36500

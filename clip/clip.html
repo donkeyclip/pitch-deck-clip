@@ -3,8 +3,10 @@
     <div class="rb"></div>
     <div class="contact-list-root">
       <div class="item" mc-for="key,item" mc-of="initParams.contact.list">
-        <div class="icon"><img src={{item.icon}}/></div>
-        <div class="contact-info-wrapper"><div class="{{ 'contact-info contact-info-' + key }}">{{ item.info }}</div></div>
+        <div class="icon-wrapper">
+          <div class="icon" style="background:url({{item.icon}}); background-position: center; background-size: contain;"></div>
+        </div>
+        <div class="contact-info-wrapper"><div class="contact-info">{{ item.info }}</div></div>
       </div>
     </div>
     <div class="title">{{initParams.contact.title}}</div>
@@ -19,23 +21,38 @@
       <div class="step" mc-for="key,item" mc-of="initParams.future.steps">
           <div class="future-id-wrapper"><div class="future-id">{{key+1}}</div></div>
           <div>
-            <div class="future-title-wrapper"><div class="{{ 'future-title future-title-' + key }}">{{ item.title }}</div></div>
-            <div class="future-description-wrapper"><div class="{{ 'future-description future-description-' + key }}">{{ item.description }}</div></div>
+            <div class="future-title-wrapper"><div class="future-title">{{ item.title }}</div></div>
+            <div class="future-description-wrapper"><div class="future-description">{{ item.description }}</div></div>
           </div>
       </div>
     </div>
   </div>
-  <div class="team">
-    <div class="lt"></div>
-    <div class="title">{{initParams.team.title}}</div>
-    <div class="team-list-root">
-      <div class="member" mc-for="key,item" mc-of="initParams.team.list">
-          <div class="img"><img src={{item.img}}/></div>
-          <div class="member-title-wrapper"><div class="{{ 'member-title member-title-' + key }}">{{ item.title }}</div></div>
-          <div class="member-subtitle-wrapper"><div class="{{ 'member-subtitle member-subtitle-' + key }}">{{ item.subtitle }}</div></div>
+    <div class="team" mc-if="initParams.team.list.length >= 5">
+      <div class="title">{{initParams.team.title}}</div>
+      <div class="team-list-root team-list-root-five">
+        <div class="lt"></div>
+        <div class="member" mc-for="key,item" mc-of="initParams.team.list">
+          <div>
+            <div class="img" style="background:url({{item.img}}); background-position: center; background-size: contain;"></div>
+            <div class="member-title-wrapper"><div class="member-title">{{ item.title }}</div></div>
+          </div>
+          <div class="member-subtitle-wrapper"><div class="member-subtitle">{{ item.subtitle }}</div></div>
+        </div>
       </div>
     </div>
-  </div>
+    <div class="team" mc-if="4 >= initParams.team.list.length">
+      <div class="title">{{initParams.team.title}}</div>
+      <div class="team-list-root">
+        <div class="lt"></div>
+        <div class="member" mc-for="key,item" mc-of="initParams.team.list">
+          <div class="up">
+            <div class="img" style="background:url({{item.img}}); background-position: center; background-size: contain;"></div>
+            <div class="member-title-wrapper"><div class="member-title">{{ item.title }}</div></div>
+          </div>
+          <div class="member-subtitle-wrapper"><div class="member-subtitle">{{ item.subtitle }}</div></div>
+        </div>
+      </div>
+    </div>
   <div class="model">
     <div class="model-info">
       <div class="title">{{initParams.model.title}}</div>
@@ -44,18 +61,18 @@
     <div class="model-list-root">
       <div class="item" mc-for="key,item" mc-of="initParams.model.list">
           <div class="line"></div>
-          <div class="model-description-wrapper"><div class="{{ 'model-description model-description-' + key }}">{{ item }}</div></div>
+          <div class="model-description-wrapper"><div class="model-description">{{ item }}</div></div>
       </div>
     </div>
   </div>
   <div class="competitor-approach">
     <div class="title">{{initParams.cApproach.title}}</div>
     <div class="competitor-approach-list-root">
-      <div mc-for="key,item" mc-of="initParams.cApproach.list" class="flex-row item">
-        <div class="competitor-approach-icon-wrapper"><div class="{{ 'competitor-approach-icon competitor-approach-icon-' + key }}"><img src={{item.icon}}/></div></div>
+      <div mc-for="key,item" mc-of="initParams.cApproach.list" class="flex-row">
+        <div class="competitor-approach-icon-wrapper"><div class="competitor-approach-icon" style="background:url({{item.icon}}); background-position: center; background-size: contain;"></div></div>
         <div class="flex-column">
-          <div class="competitor-approach-title-wrapper"><div class="{{ 'competitor-approach-title competitor-approach-title-' + key }}">{{item.title}}</div></div>
-          <div class="competitor-approach-description-wrapper"><div class="{{ 'competitor-approach-description competitor-approach-description-' + key }}">{{item.description}}</div></div>
+          <div class="competitor-approach-title-wrapper"><div class="competitor-approach-title">{{item.title}}</div></div>
+          <div class="competitor-approach-description-wrapper"><div class="competitor-approach-description">{{item.description}}</div></div>
         </div>
       </div>
   </div>
@@ -64,8 +81,8 @@
     <div class="lt"></div>
     <div class="competive-advantages-list-root">
         <div mc-for="key,item" mc-of="initParams.competiveAdvantages.list" class="flex-column item">
-          <div class="competive-advantages-title-wrapper"><div class="{{ 'competive-advantages-title competive-advantages-title-' + key }}">{{item.title}}</div></div>
-          <div class="competive-advantages-description-wrapper"><div class="{{ 'competive-advantages-description competive-advantages-description-' + key }}">{{item.description}}</div></div>
+          <div class="competive-advantages-title-wrapper"><div class="competive-advantages-title">{{item.title}}</div></div>
+          <div class="competive-advantages-description-wrapper"><div class="competive-advantages-description">{{item.description}}</div></div>
         </div>
     </div>
     <div class="title">{{initParams.competiveAdvantages.title}}</div>
@@ -76,14 +93,18 @@
       <div class="title">{{initParams.competitors.dCompetitors.title}}</div>
       <div class="competitors-list-root direct-competitors-list-root">
         <div class="item" mc-for="key,item" mc-of="initParams.competitors.dCompetitors.list">
-            <div class="competitors-icon-wrapper direct-competitors-icon-wrapper"> <div class="{{ 'direct-competitors-icon direct-competitors-icon-' + key }}"><img src={{item}}/></div></div>
+            <div class="direct-competitors-icon-wrapper"> 
+              <div class="direct-competitors-icon" style="background:url({{item}}); background-position: center; background-size: contain;"></div>
+            </div>
         </div>
       </div>
     </div>
     <div class="indirect">
       <div class="competitors-list-root indirect-competitors-list-root">
         <div class="item" mc-for="key,item" mc-of="initParams.competitors.iCompetitors.list">
-            <div class="competitors-icon-wrapper indirect-competitors-icon-wrapper"> <div class="{{ 'indirect-competitors-icon indirect-competitors-icon-' + key }}"><img src={{item}}/></div></div>
+            <div class="indirect-competitors-icon-wrapper"> 
+              <div class="indirect-competitors-icon" style="background:url({{item}}); background-position: center; background-size: contain;"></div>
+            </div>
         </div>
       </div>
       <div class="title">{{initParams.competitors.iCompetitors.title}}</div>
@@ -96,19 +117,19 @@
     </div>
     <div class="market-size-list-root">
       <div class="flex-column" mc-for="key,item" mc-of="initParams.marketSize.list">
-          <div class="market-size-number-wrapper"> <div class="{{ 'market-size-number market-size-number-' + key }}">{{ item.number }}</div></div>
-          <div class="market-size-tag-wrapper"><div class="{{ 'market-size-tag market-size-tag-' + key }}">{{ item.tag }}</div></div>
+          <div class="market-size-number-wrapper"> <div class="market-size-number">{{ item.number }}</div></div>
+          <div class="market-size-tag-wrapper"><div class="market-size-tag">{{ item.tag }}</div></div>
       </div>
     </div>
   </div>
   <div class="target-market">
     <div class="rb"></div>
-    <div class="lt"></div>
     <div class="text">
       <div class="target-market-list-root">
+        <div class="lt"></div>
         <div class="flex-column" mc-for="key,item" mc-of="initParams.targetMarket.list">
-            <div class="target-market-title-wrapper"> <div class="{{ 'target-market-title target-market-title-' + key }}">{{ item.title }}</div></div>
-            <div class="target-market-description-wrapper"><div class="{{ 'target-market-description target-market-description-' + key }}">{{ item.description }}</div></div>
+            <div class="target-market-title">{{ item.title }}</div>
+            <div class="target-market-description">{{ item.description }}</div>
         </div>
       </div>
       <div class="target-market-info">
@@ -116,7 +137,7 @@
         <div class="subtitle">{{initParams.targetMarket.subtitle}}</div>
       </div>
     </div>
-    <div class="img"><img src="/assets/target-market.jpeg"/></div>
+    <div class="img"></div>
   </div>
   <div class="traction">
     <div class="chart"></div>
@@ -133,11 +154,11 @@
     <div class="title">{{initParams.timing.title}}</div>
     <div class="timing-info">
       <div mc-for="key,item" mc-of="initParams.timing.reasons" class="flex-column">
-        <div class="timing-title-wrapper"><div class="{{ 'timing-title timing-title-' + key }}">{{item.title}}</div></div>
-        <div class="timing-description-wrapper"><div class="{{ 'timing-description timing-description-' + key }}">{{item.description}}</div></div>
+        <div class="timing-title-wrapper"><div class="timing-title">{{item.title}}</div></div>
+        <div class="timing-description-wrapper"><div class="timing-description">{{item.description}}</div></div>
       </div>
     </div>
-    <div class="img"><img src="/assets/startup.jpeg"/></div>
+    <div class="img"></div>
   </div>
   <div class="timeline">
     <div class="rb"></div>
@@ -148,7 +169,7 @@
     </div>
    <div class="calendar">
       <div mc-for="key,item" mc-of="initParams.timeline.steps" class="flex-column">
-        <div class="step-title-wrapper"><div class="{{ 'step-title step-title-' + key }}"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50px" height="50px" viewBox="0 0 50 50" version="1.1">
+        <div class="step-title-wrapper"><div class="step-title"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50px" height="50px" viewBox="0 0 50 50" version="1.1">
           <g id="surface1">
           <path style=" stroke:none;fill-rule:nonzero;fill:rgb(74.117647%,76.470588%,78.039216%);fill-opacity:1;" d="M 10.417969 8.332031 C 8.117188 8.332031 6.25 10.207031 6.25 12.5 L 6.25 41.667969 C 6.25 43.957031 8.117188 45.832031 10.417969 45.832031 L 39.582031 45.832031 C 41.886719 45.832031 43.75 43.957031 43.75 41.667969 L 43.75 12.5 C 43.75 10.207031 41.886719 8.332031 39.582031 8.332031 Z M 10.417969 8.332031 "/>
           <path style=" stroke:none;fill-rule:nonzero;fill:rgb(92.54902%,94.117647%,94.509804%);fill-opacity:1;" d="M 10.417969 6.25 C 8.117188 6.25 6.25 8.117188 6.25 10.417969 L 6.25 39.582031 C 6.25 41.886719 8.117188 43.75 10.417969 43.75 L 39.582031 43.75 C 41.886719 43.75 43.75 41.886719 43.75 39.582031 L 43.75 10.417969 C 43.75 8.117188 41.886719 6.25 39.582031 6.25 Z M 10.417969 6.25 "/>
@@ -163,13 +184,13 @@
           <path style=" stroke:none;fill-rule:nonzero;fill:rgb(75.294118%,22.352941%,16.862745%);fill-opacity:1;" d="M 6.25 16.667969 L 43.75 16.667969 L 43.75 18.75 L 6.25 18.75 Z M 6.25 16.667969 "/>
           </g>
           </svg> {{item.title}}</div></div>
-        <div class="step-date-wrapper"><div class="{{ 'step-date step-date-' + key }}">{{item.date}}</div></div>
+        <div class="step-date-wrapper"><div class="step-date">{{item.date}}</div></div>
       </div>
     </div>
   </div>
   <div class="product">
     <div class="lt"></div>
-    <div class="img"><img src="/assets/robot.png"/></div>
+    <div class="img"></div>
     <div class="product-info">
       <div class="title">{{initParams.product.title}}</div>
       <div class="description">{{initParams.product.description}}</div>
@@ -184,8 +205,8 @@
     </div>
     <div class="solution-list-root">
       <div class="flex-column" mc-for="key,item" mc-of="initParams.solution.list">
-          <div class="solution-title-wrapper"> <div class="{{ 'solution-title solution-title-' + key }}">{{ item.title }} <svg enable-background="new 0 0 32 32" height="32px" id="Layer_1" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="search_1_"><path d="M20,0.005c-6.627,0-12,5.373-12,12c0,2.026,0.507,3.933,1.395,5.608l-8.344,8.342l0.007,0.006   C0.406,26.602,0,27.49,0,28.477c0,1.949,1.58,3.529,3.529,3.529c0.985,0,1.874-0.406,2.515-1.059l-0.002-0.002l8.341-8.34   c1.676,0.891,3.586,1.4,5.617,1.4c6.627,0,12-5.373,12-12C32,5.378,26.627,0.005,20,0.005z M4.795,29.697   c-0.322,0.334-0.768,0.543-1.266,0.543c-0.975,0-1.765-0.789-1.765-1.764c0-0.498,0.21-0.943,0.543-1.266l-0.009-0.008l8.066-8.066   c0.705,0.951,1.545,1.791,2.494,2.498L4.795,29.697z M20,22.006c-5.522,0-10-4.479-10-10c0-5.522,4.478-10,10-10   c5.521,0,10,4.478,10,10C30,17.527,25.521,22.006,20,22.006z" fill="#ff4343"/><path d="M20,5.005c-3.867,0-7,3.134-7,7c0,0.276,0.224,0.5,0.5,0.5s0.5-0.224,0.5-0.5c0-3.313,2.686-6,6-6   c0.275,0,0.5-0.224,0.5-0.5S20.275,5.005,20,5.005z" fill="#ff4343"/></g></svg></div></div>
-          <div class="solution-description-wrapper"><div class="{{ 'solution-description solution-description-' + key }}">{{ item.description }}</div></div>
+          <div class="solution-title-wrapper"> <div class="solution-title">{{ item.title }} <svg enable-background="new 0 0 32 32" height="32px" id="Layer_1" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="search_1_"><path d="M20,0.005c-6.627,0-12,5.373-12,12c0,2.026,0.507,3.933,1.395,5.608l-8.344,8.342l0.007,0.006   C0.406,26.602,0,27.49,0,28.477c0,1.949,1.58,3.529,3.529,3.529c0.985,0,1.874-0.406,2.515-1.059l-0.002-0.002l8.341-8.34   c1.676,0.891,3.586,1.4,5.617,1.4c6.627,0,12-5.373,12-12C32,5.378,26.627,0.005,20,0.005z M4.795,29.697   c-0.322,0.334-0.768,0.543-1.266,0.543c-0.975,0-1.765-0.789-1.765-1.764c0-0.498,0.21-0.943,0.543-1.266l-0.009-0.008l8.066-8.066   c0.705,0.951,1.545,1.791,2.494,2.498L4.795,29.697z M20,22.006c-5.522,0-10-4.479-10-10c0-5.522,4.478-10,10-10   c5.521,0,10,4.478,10,10C30,17.527,25.521,22.006,20,22.006z" fill="#ff4343"/><path d="M20,5.005c-3.867,0-7,3.134-7,7c0,0.276,0.224,0.5,0.5,0.5s0.5-0.224,0.5-0.5c0-3.313,2.686-6,6-6   c0.275,0,0.5-0.224,0.5-0.5S20.275,5.005,20,5.005z" fill="#ff4343"/></g></svg></div></div>
+          <div class="solution-description-wrapper"><div class="solution-description">{{ item.description }}</div></div>
       </div>
     </div>
   </div>
@@ -198,8 +219,8 @@
     </div>
     <div class="problem-list-root">
       <div class="flex-column" mc-for="key,item" mc-of="initParams.problem.list">
-          <div class="problem-title-wrapper"> <div class="{{ 'problem-title problem-title-' + key }}">{{ item.title }}</div></div>
-          <div class="problem-description-wrapper"><div class="{{ 'problem-description problem-description-' + key }}">{{ item.description }}</div></div>
+          <div class="problem-title-wrapper"> <div class="problem-title">{{ item.title }}</div></div>
+          <div class="problem-description-wrapper"><div class="problem-description">{{ item.description }}</div></div>
       </div>
     </div>
   </div>
