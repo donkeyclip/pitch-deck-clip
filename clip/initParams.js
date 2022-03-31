@@ -2,10 +2,6 @@ export const initParams = [
   {
     name: "Default",
     value: {
-      assets:{
-        logo:"https://presskit.donkeyclip.com/logos/donkey%20clip%20logo.svg",
-        introImg:"https://unsplash.com/photos/n--CMLApjfI/download?force=true"
-      },
       styles:{
         accent:"#f4f4f4",
         secondary:"#ff4343",
@@ -55,7 +51,7 @@ export const initParams = [
       product:{
         title:"Product or Service",
         description:"Introduce your company's product or service as the ultimate solution to these problems",
-        img:"https://github.com/donkeyclip/pitch-deck/blob/main/demo/assets/robot.png?raw=true"
+        img:"https://donkeyclip.github.io/pitch-deck-clip/demo/assets/robot.png"
       },
       timeline:{
         title:"Birth of Productor Service",
@@ -91,7 +87,7 @@ export const initParams = [
             description:"What arre the trends these days that make your product or service possible?"
           }
         ],
-        img:"https://github.com/donkeyclip/pitch-deck/blob/main/demo/assets/startup.jpeg?raw=true"
+        img:"https://donkeyclip.github.io/pitch-deck-clip/demo/assets/startup.jpeg"
       },
       traction:{
         title:"Traction",
@@ -144,7 +140,7 @@ export const initParams = [
       targetMarket:{
         title:"Target Market",
         subtitle:"Who are the customers you want to care to?",
-        img:"https://github.com/donkeyclip/pitch-deck/blob/main/demo/assets/target-market.jpeg?raw=true",
+        img:"https://donkeyclip.github.io/pitch-deck-clip/demo/assets/target-market.jpeg",
         list:[
           {
             title:"Target Market 1",
@@ -182,17 +178,17 @@ export const initParams = [
         dCompetitors:{
           title:"Direct Competitors",
           list:[
-            "https://github.com/donkeyclip/pitch-deck/blob/main/demo/assets/cm1.png?raw=true",
-            "https://github.com/donkeyclip/pitch-deck/blob/main/demo/assets/cm2.png?raw=true",
-            "https://github.com/donkeyclip/pitch-deck/blob/main/demo/assets/cm3.png?raw=true"
+            "https://donkeyclip.github.io/pitch-deck-clip/demo/assets/cm1.png",
+            "https://donkeyclip.github.io/pitch-deck-clip/demo/assets/cm2.png",
+            "https://donkeyclip.github.io/pitch-deck-clip/demo/assets/cm3.png"
           ]
         },
         iCompetitors:{
           title:"Indirect Competitors",
           list:[
-            "https://github.com/donkeyclip/pitch-deck/blob/main/demo/assets/cm4.png?raw=true",
-            "https://github.com/donkeyclip/pitch-deck/blob/main/demo/assets/cm5.png?raw=true",
-            "https://github.com/donkeyclip/pitch-deck/blob/main/demo/assets/cm6.png?raw=true"
+            "https://donkeyclip.github.io/pitch-deck-clip/demo/assets/cm4.png",
+            "https://donkeyclip.github.io/pitch-deck-clip/demo/assets/cm5.png",
+            "https://donkeyclip.github.io/pitch-deck-clip/demo/assets/cm6.png"
           ]
         }
       },
@@ -221,17 +217,17 @@ export const initParams = [
         title:"Competitor Approach",
         list:[
           {
-            icon:"https://github.com/donkeyclip/pitch-deck/blob/main/demo/assets/approach1.png?raw=true",
+            icon:"https://donkeyclip.github.io/pitch-deck-clip/demo/assets/approach1.png",
             title:"Approach 1",
             description:"How will you set your company from the competition?"
           },
           {
-            icon:"https://github.com/donkeyclip/pitch-deck/blob/main/demo/assets/approach2.png?raw=true",
+            icon:"https://donkeyclip.github.io/pitch-deck-clip/demo/assets/approach2.png",
             title:"Approach 2",
             description:"What's your path to reach your customers?"
           },
           {
-            icon:"https://github.com/donkeyclip/pitch-deck/blob/main/demo/assets/approach3.png?raw=true",
+            icon:"https://donkeyclip.github.io/pitch-deck-clip/demo/assets/approach3.png",
             title:"Approach 3",
             description:"Events, partnerships, ads - list the effective ways to reach them."
           }
@@ -250,17 +246,17 @@ export const initParams = [
         title:"The Team",
         list:[
           {
-            img:"https://github.com/donkeyclip/pitch-deck/blob/main/demo/assets/member1.jpeg?raw=true",
+            img:"https://donkeyclip.github.io/pitch-deck-clip/demo/assets/member1.jpeg",
             title:"Team Member 1",
             subtitle:"Title"
           },
           {
-            img:"https://github.com/donkeyclip/pitch-deck/blob/main/demo/assets/member2.jpeg?raw=true",
+            img:"https://donkeyclip.github.io/pitch-deck-clip/demo/assets/member2.jpeg",
             title:"Team Member 2",
             subtitle:"Title"
           },
           {
-            img:"https://github.com/donkeyclip/pitch-deck/blob/main/demo/assets/member3.jpeg?raw=true",
+            img:"https://donkeyclip.github.io/pitch-deck-clip/demo/assets/member3.jpeg",
             title:"Team Member 3",
             subtitle:"Title"
           }
@@ -292,15 +288,15 @@ export const initParams = [
         title:"Contact Us",
         list:[
           {
-            icon:"https://github.com/donkeyclip/pitch-deck/blob/main/demo/assets/phone.png?raw=true",
+            icon:"https://donkeyclip.github.io/pitch-deck-clip/demo/assets/phone.png",
             info:"012-345-6789"
           },
           {
-            icon:"https://github.com/donkeyclip/pitch-deck/blob/main/demo/assets/mail.png?raw=true",
+            icon:"https://donkeyclip.github.io/pitch-deck-clip/demo/assets/mail.png",
             info:"hello@contact.com"
           },
           {
-            icon:"https://github.com/donkeyclip/pitch-deck/blob/main/demo/assets/website.png?raw=true",
+            icon:"https://donkeyclip.github.io/pitch-deck-clip/demo/assets/website.png",
             info:"www.hello.com"
           }
         ]
