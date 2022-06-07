@@ -152,7 +152,7 @@ clip.addIncident(
   22900
 );
 clip.addIncident(lineGraph,22900)
-// /////// duration:5000 timings: {intro: 2000,static: 1000,outro: 2000},starttime:10900
+
 //remove traction slide
 clip.addIncident(
   widthMove("100%", ".traction > .lt,.traction > .rb", 400),
@@ -295,4 +295,3 @@ clip.addIncident(widthMove("35%",".contact > .rb",400),61200)
 clip.addIncident(moveLeft("0px",".contact-info",400,"@stagger(0,1000)"),61600)
 clip.addIncident(opacity1(".contact .icon-wrapper",100,"@stagger(0, 1000)"),61500)
 
-// //scroll-stops 400,2700,4500,5500,7700,9900,12900,18300,20900,23100,24800,26600,28800,32600,35800,36500
