@@ -15,6 +15,7 @@ import {
   opacity1,
 } from "./incidents";
 import { initParams } from "./initParams";
+import initParamsValidationRules from "./initParamsValidationRules";
 
 export const clip = new HTMLClip({
   html,
@@ -151,7 +152,7 @@ clip.addIncident(
   widthMove("6%", ".traction > .lt,.traction > .rb", 700),
   22900
 );
-clip.addIncident(lineGraph,22900)
+clip.addIncident(lineGraph(initParams[0].value.traction.graphData),22900)
 
 //remove traction slide
 clip.addIncident(

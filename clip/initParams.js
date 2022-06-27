@@ -6,7 +6,6 @@ export const initParams = [
         accent:"#f4f4f4",
         secondary:"#ff4343",
         primary:"#202020",
-        font:"Outfit"
       },
       intro: {
         slogan:"Write your company name above and an intriguing summary of what your company does here.",
@@ -97,42 +96,42 @@ export const initParams = [
           maxValue:40,
           dataSets:[
             {
-              "title": "PhaseA",
-              "color": "#ff1f4c"
+              title: "PhaseA",
+              color: "#ff1f4c"
             },
             {
-              "title": "PhaseB",
-              "color": "#ff82ad"
+              title: "PhaseB",
+              color: "#ff82ad"
             }
           ],
           data:[
             {
-              "name": "Id1",
-              "values": [10, 18]
+              name: "Id1",
+              values: [10, 18]
             },
             {
-              "name": "Id2",
-              "values": [15, 27]
+              name: "Id2",
+              values: [15, 27]
             },
             {
-              "name": "Id3",
-              "values": [29, 23]
+              name: "Id3",
+              values: [29, 23]
             },
             {
-              "name": "Id4",
-              "values": [31, 35]
+              name: "Id4",
+              values: [31, 35]
             },
             {
-              "name": "Id5",
-              "values": [29, 23]
+              name: "Id5",
+              values: [29, 23]
             },
             {
-              "name": "Id6",
-              "values": [15, 27]
+              name: "Id6",
+              values: [15, 27]
             },
             {
-              "name": "Id7",
-              "values": [10, 18]
+              name: "Id7",
+              values: [10, 18]
             }
           ],
         }

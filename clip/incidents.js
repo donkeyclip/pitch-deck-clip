@@ -193,55 +193,10 @@ export const riple = (
     }
   );
 };
-export const lineGraph =  
+export const lineGraph = (graphdata)=>  
 new Graph.LineGraph(
   {
-    data: {
-    "title": "",
-    "maxValue": 40,
-    "hover": false,
-    "showGrid":false,
-    "dataSets": [
-      {
-        "title": "PhaseA",
-        "color": "#ff1f4c"
-      },
-      {
-        "title": "PhaseB",
-        "color": "#ff82ad"
-      }
-    ],
-    "data": [
-      {
-        "name": "Id1",
-        "values": [10, 18]
-      },
-      {
-        "name": "Id2",
-        "values": [15, 27]
-      },
-      {
-        "name": "Id3",
-        "values": [29, 23]
-      },
-      {
-        "name": "Id4",
-        "values": [31, 35]
-      },
-      {
-        "name": "Id5",
-        "values": [29, 23]
-      },
-      {
-        "name": "Id6",
-        "values": [15, 27]
-      },
-      {
-        "name": "Id7",
-        "values": [10, 18]
-      }
-    ]
-  },
+    data: graphdata,
     trace: {
       toggle: false,
       scale: 1.45,
