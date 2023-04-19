@@ -58,18 +58,19 @@ export const moveTop = (
   selector,
   duration,
   delay = 0,
-  easing = "linear"
+  initialValues = {}
 ) =>
   new CSSEffect(
     {
       animatedAttrs: {
         top,
       },
+      initialValues,
     },
     {
       selector,
       duration,
-      easing,
+
       delay,
     }
   );
@@ -79,18 +80,19 @@ export const moveBottom = (
   selector,
   duration,
   delay = 0,
-  easing = "linear"
+  initialValues = {}
 ) =>
   new CSSEffect(
     {
       animatedAttrs: {
         bottom,
       },
+      initialValues,
     },
     {
       selector,
       duration,
-      easing,
+
       delay,
     }
   );
@@ -100,18 +102,18 @@ export const moveLeft = (
   selector,
   duration,
   delay = 0,
-  easing = "linear"
+  initialValues = {}
 ) =>
   new CSSEffect(
     {
       animatedAttrs: {
         left,
       },
+      initialValues,
     },
     {
       selector,
       duration,
-      easing,
       delay,
     }
   );
@@ -121,18 +123,19 @@ export const moveRight = (
   selector,
   duration,
   delay = 0,
-  easing = "linear"
+  initialValues = {}
 ) =>
   new CSSEffect(
     {
       animatedAttrs: {
         right,
       },
+      initialValues,
     },
     {
       selector,
       duration,
-      easing,
+
       delay,
     }
   );
@@ -151,17 +154,17 @@ export const heightMove = (height, selector, duration, easing = "linear") =>
     }
   );
 
-export const widthMove = (width, selector, duration, easing = "linear") =>
+export const widthMove = (width, selector, duration, initialValues) =>
   new CSSEffect(
     {
       animatedAttrs: {
         width,
       },
+      initialValues,
     },
     {
       selector,
       duration,
-      easing,
     }
   );
 
@@ -193,41 +196,41 @@ export const riple = (
     }
   );
 };
-export const lineGraph = (graphdata)=>  
-new Graph.LineGraph(
-  {
-    data: graphdata,
-    trace: {
-      toggle: false,
-      scale: 1.45,
+export const lineGraph = (graphdata) =>
+  new Graph.LineGraph(
+    {
+      data: graphdata,
+      trace: {
+        toggle: false,
+        scale: 1.45,
+      },
+      legend: true,
+      timings: {
+        intro: 2000,
+        static: 1000,
+        outro: 2000,
+      },
+      palette: {
+        accent: "#fff",
+        primary: "#ffffff42", //grames
+        font: "#2d2d2d",
+        secondary: "#2d2d2d", //background color
+        quinary: "#fff",
+        senary: "#fff",
+      },
+      font: {
+        size: "1.7rem",
+      },
     },
-    legend: true,
-    timings: {
-      intro: 2000,
-      static: 1000,
-      outro: 2000,
-    },
-    palette: {
-            accent: "#fff",
-            primary: "#ffffff42", //grames
-            font: "#2d2d2d",
-            secondary: "#2d2d2d", //background color
-            quinary: "#fff",
-            senary: "#fff",
-          },
-    font: {
-      size: "1.7rem",
-    },
-  },
-  {
-    selector: ".chart",
-    containerParams: {
-      width: "1280px",
-      height: "780px",
-    },
-  }
-);
-// export const lineGraph =  (title,maxValue,dataSets,data)=> 
+    {
+      selector: ".chart",
+      containerParams: {
+        width: "1280px",
+        height: "780px",
+      },
+    }
+  );
+// export const lineGraph =  (title,maxValue,dataSets,data)=>
 // new Graph.LineGraph(
 //   {
 //     data: {
