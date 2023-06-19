@@ -32,7 +32,7 @@
     "@donkeyclip/motorcortex": "^9.5.7",
     "@donkeyclip/motorcortex-anime": "^3.1.1",
     "@donkeyclip/motorcortex-graphs": "^2.2.2",
-    "html-loader": "3.1.0",
+    "html-loader": "3.1.2",
     "raw-loader": "4.0.2"
   },
   "devDependencies": {
